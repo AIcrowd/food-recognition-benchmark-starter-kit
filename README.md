@@ -13,13 +13,13 @@ pip install -r requirements.txt
 Please download the datasets from [https://www.crowdai.org/challenges/mapping-challenge/dataset_files](https://www.crowdai.org/challenges/mapping-challenge/dataset_files), and untar them to have the following directory structure :
 
 ```bash
-|-- data
-|   |-- test_images (has all images for prediction)
-|   |-- train
+|-- data/
+|   |-- test_images/ (has all images for prediction)
+|   |-- train/
 |   |   `-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
 |   |   |__ annotation-small.json : Smaller version of the previous dataset
-|   `-- val
+|   `-- val/
 |   |   `-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
 |   |   |__ annotation-small.json : Smaller version of the previous dataset
