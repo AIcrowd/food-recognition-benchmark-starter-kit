@@ -10,7 +10,7 @@ IMAGE_HEIGHT = 300
 padding = 50
 SEGMENTATION_LENGTH = 10
 
-IMAGE_IDS = list(range(60582)) #As there are 60582, and the image_ids are sequentially numbered
+IMAGE_IDS = list(range(60697)) #As there are 60582, and the image_ids are sequentially numbered
 
 print("Generating random results file....")
 for k in IMAGE_IDS:

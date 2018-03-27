@@ -1,2 +1,6 @@
 data/*
 logs/*
+*.pth
+*.pyc
+*.so
+*.o
