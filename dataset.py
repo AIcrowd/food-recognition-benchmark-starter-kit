@@ -6,8 +6,10 @@ from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 from pycocotools import mask as maskUtils
 
+import os
+
 class MappingChallengeDataset(utils.Dataset):
-    def load_dataset(dataset_dir, load_small=False, return_coco=True):
+    def load_dataset(self, dataset_dir, load_small=False, return_coco=True):
         """ Loads dataset released for the crowdAI Mapping Challenge(https://www.crowdai.org/challenges/mapping-challenge)
             Params:
                 - dataset_dir : root directory of the dataset (can point to the train/val folder)
@@ -34,7 +36,7 @@ class MappingChallengeDataset(utils.Dataset):
 
         # register classes
         for _class_id in classIds:
-            self.add_class("crowdai-mapping-challenge", i, self.coco.loadCats(i)[0]["name"])
+            self.add_class("crowdai-mapping-challenge", _class_id, self.coco.loadCats(_class_id)[0]["name"])
 
         # Register Images
         for _img_id in image_ids:
@@ -45,7 +47,7 @@ class MappingChallengeDataset(utils.Dataset):
                 height=self.coco.imgs[_img_id]["height"],
                 annotations=self.coco.loadAnns(self.coco.getAnnIds(
                                             imgIds=[_img_id],
-                                            catIds=class_ids,
+                                            catIds=classIds,
                                             iscrowd=None)))
 
         if return_coco:
