@@ -1,5 +1,5 @@
 # mapping-challenge-starter-kit
-
+![CrowdAI-Logo](https://github.com/crowdAI/crowdai/raw/master/app/assets/images/misc/crowdai-logo-smile.svg?sanitize=true)
 
 # Installation
 ```
