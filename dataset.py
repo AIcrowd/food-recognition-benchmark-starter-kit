@@ -40,6 +40,7 @@ class MappingChallengeDataset(utils.Dataset):
 
         # Register Images
         for _img_id in image_ids:
+            assert(os.path.exists(os.path.join(image_dir, self.coco.imgs[_img_id]['file_name'])))
             self.add_image(
                 "crowdai-mapping-challenge", image_id=_img_id,
                 path=os.path.join(image_dir, self.coco.imgs[_img_id]['file_name']),

@@ -1377,7 +1377,17 @@ class Dataset(torch.utils.data.Dataset):
         # where we train on a subset of classes and the image doesn't
         # have any of the classes we care about.
         if not np.any(gt_class_ids > 0):
-            return None
+            """
+            In the case that an image has no relevant classes, we simply return
+            the values from the index after this image. This is just for consistency.
+
+            We just need to ensure that the last item has atleast one class label.
+            """
+            if image_index != self.__len__()-1:
+                return self.__getitem__(image_index+1)
+            else:
+                return None
+            #return None
 
         # RPN Targets
         rpn_match, rpn_bbox = build_rpn_targets(image.shape, self.anchors,
@@ -1785,25 +1795,11 @@ class MaskRCNN(nn.Module):
         if layers in layer_regex.keys():
             layers = layer_regex[layers]
 
-        # Custom collate function
-
-        IMAGE_MIN_DIM = self.config.IMAGE_MIN_DIM
-        IMAGE_MAX_DIM = self.config.IMAGE_MAX_DIM
-        GPU_COUNT = self.config.GPU_COUNT
-        def graceful_collate(batch):
-            batch = list(filter (lambda x: x is not None, batch))
-            if len(batch) == 0:
-                fake_response = torch.zeros((1, IMAGE_MIN_DIM, IMAGE_MIN_DIM, 3))
-                if GPU_COUNT:
-                    fake_response = fake_response.cuda()
-                batch = [fake_response]
-            return default_collate(batch)
-
         # Data generators
         train_set = Dataset(train_dataset, self.config, augment=True)
-        train_generator = torch.utils.data.DataLoader(train_set, batch_size=1, shuffle=True, num_workers=4, collate_fn=graceful_collate)
+        train_generator = torch.utils.data.DataLoader(train_set, batch_size=1, shuffle=True, num_workers=4)
         val_set = Dataset(val_dataset, self.config, augment=True)
-        val_generator = torch.utils.data.DataLoader(val_set, batch_size=1, shuffle=True, num_workers=4, collate_fn=graceful_collate)
+        val_generator = torch.utils.data.DataLoader(val_set, batch_size=1, shuffle=True, num_workers=4)
 
         # Train
         log("\nStarting at epoch {}. LR={}\n".format(self.epoch+1, learning_rate))
