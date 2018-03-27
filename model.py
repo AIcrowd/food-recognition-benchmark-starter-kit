@@ -1787,8 +1787,16 @@ class MaskRCNN(nn.Module):
 
         # Custom collate function
 
+        IMAGE_MIN_DIM = self.config.IMAGE_MIN_DIM
+        IMAGE_MAX_DIM = self.config.IMAGE_MAX_DIM
+        GPU_COUNT = self.config.GPU_COUNT
         def graceful_collate(batch):
             batch = list(filter (lambda x: x is not None, batch))
+            if len(batch) == 0:
+                fake_response = torch.zeros((1, IMAGE_MIN_DIM, IMAGE_MIN_DIM, 3))
+                if GPU_COUNT:
+                    fake_response = fake_response.cuda()
+                batch = [fake_response]
             return default_collate(batch)
 
         # Data generators
