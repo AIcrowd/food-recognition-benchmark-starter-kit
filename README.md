@@ -19,11 +19,11 @@ Please download the datasets from [https://www.crowdai.org/challenges/mapping-ch
 |   |-- train/
 |   |   `-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
-|   |   |__ annotation-small.json : Smaller version of the previous dataset
+|   |   |__ annotation-small.json : Smaller version of the "annotation.json"
 |   `-- val/
 |   |   `-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
-|   |   |__ annotation-small.json : Smaller version of the previous dataset
+|   |   |__ annotation-small.json : Smaller version of the "annotation.json"
 ```
 
 # Usage
