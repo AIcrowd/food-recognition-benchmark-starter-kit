@@ -32,3 +32,4 @@ jupyter-core==4.3.0
 jupyter-repo2docker==0.5.0
 jupyterlab==0.27.0
 jupyterlab-launcher==0.4.0
+crowdai==1.0.18
