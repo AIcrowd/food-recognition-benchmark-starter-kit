@@ -3,7 +3,7 @@
 
 # Installation
 ```
-git clone git@github.com:crowdAI/mapping-challenge-starter-kit.git
+git clone https://github.com/crowdAI/mapping-challenge-starter-kit
 cd mapping-challenge-starter-kit
 pip install -r requirements.txt
 ```
