@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 
 # Dataset
-Please download the datasets from [https://www.crowdai.org/challenges/mapping-challenge/dataset_files](https://www.crowdai.org/challenges/mapping-challenge/dataset_files), and [untar](http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file) them to have the following directory structure :
+Please download the datasets from [https://www.crowdai.org/challenges/mapping-challenge/dataset_files](https://www.crowdai.org/challenges/mapping-challenge/dataset_files), and put them in the `data/` folder. [Untar](http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file) them (this might take some time) to have the following directory structure:
 
 ```bash
 |-- data/
@@ -20,7 +20,7 @@ Please download the datasets from [https://www.crowdai.org/challenges/mapping-ch
 |   |   `-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
 |   |   |__ annotation-small.json : Smaller version of the "annotation.json"
-|   `-- val/
+|   |-- val/
 |   |   `-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
 |   |   |__ annotation-small.json : Smaller version of the "annotation.json"
