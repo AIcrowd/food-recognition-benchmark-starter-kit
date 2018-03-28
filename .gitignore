@@ -4,3 +4,4 @@ logs/*
 *.pyc
 *.so
 *.o
+.ipynb_checkpoints/
