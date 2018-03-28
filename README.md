@@ -58,5 +58,8 @@ jupyter-notebook
 ## Miscelaneous Resources
 * [Convert Annotations from MS COCO format to PascalVOC format](https://github.com/CasiaFan/Dataset_to_VOC_converter/blob/master/anno_coco2voc.py)
 
+# Acknowledgements
+A big shoutout to our awesome community members [Florian Laurent](Florian.laurent@gmail.com), [Snigdha Dagar](snigdha.dagar@gmail.com), and [Iuliana Voinea](iuliana.voinea@cern.ch), for their help in preparing the datasets and designing the challenge.
+
 # Author   
 Sharada Mohanty <sharada.mohanty@epfl.ch>
