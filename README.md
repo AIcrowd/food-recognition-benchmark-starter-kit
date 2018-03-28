@@ -1,6 +1,8 @@
 # mapping-challenge-starter-kit
 ![CrowdAI-Logo](https://github.com/crowdAI/crowdai/raw/master/app/assets/images/misc/crowdai-logo-smile.svg?sanitize=true)
 
+[![gitter-badge](https://badges.gitter.im/crowdAI/crowdai-mapping-challenge.png)](https://gitter.im/crowdAI/crowdai-mapping-challenge)
+
 # Installation
 ```
 git clone https://github.com/crowdAI/mapping-challenge-starter-kit
