@@ -32,28 +32,23 @@ jupyter-notebook
 ```
 ## Available Notebooks
 
-* [Dataset Utils](Dataset Utils.ipynb)
-  * [Import Dependencies](Dataset Utils.ipynb#Import-dependencies)
-  * [Configuration Variables](Dataset Utils.ipynb#Configuration-Variables)
-  * [Parsing Annotations](Dataset Utils.ipynb#Parsing-the-annotations)
-  * [Collecting and Visualizing Images](Dataset Utils.ipynb#Collecting-and-Visualizing-Images)
-  * [Understanding Annotations](Dataset Utils.ipynb#Understanding-Annotations)
-  * [Visualizing Annotations](Dataset Utils.ipynb#Visualizing-Annotations)
-  * [Advanced](Dataset Utils.ipynb#Advanced)
-    * [Convert poly segmentation to rle](Dataset Utils.ipynb#1)-Convert-poly-segmentation-to-rle)
-    * [Convert segmentation to pixel level masks](Dataset Utils.ipynb#2)-Convert-segmentation-to-pixel-level-masks)
-* [Random Submission](Random Submission.ipynb)
-  * [Submission Format](Random Submission.ipynb#Submission-Format)
-  * [Generating a Random Segmentation](Random Submission.ipynb#Generate-a-random-segmentation)
-  * [Generating a Random Annotation Object](Random Submission.ipynb#Generate-a-random-annotation-object)
-  * [Generating a Random Results Object](Random Submission.ipynb#Generate-a-results-object)
-  * [Submit to crowdAI for grading](Random Submission.ipynb#Submit-to-crowdAI-for-grading)
-
-```
-python random_submission.py --api_key=<YOUR CROWDAI API KEY HERE>
-```
-* Train a Mask-RCNN
-**TODO**
+* [Dataset Utils](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb)
+  * [Import Dependencies](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Import-dependencies)
+  * [Configuration Variables](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Configuration-Variables)
+  * [Parsing Annotations](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Parsing-the-annotations)
+  * [Collecting and Visualizing Images](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Collecting-and-Visualizing-Images)
+  * [Understanding Annotations](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Understanding-Annotations)
+  * [Visualizing Annotations](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Visualizing-Annotations)
+  * [Advanced](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Advanced)
+    * [Convert poly segmentation to rle](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#1.-Convert-poly-segmentation-to-rle)
+    * [Convert segmentation to pixel level masks](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#2.-Convert-segmentation-to-pixel-level-masks)
+* [Random Submission](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb)
+  * [Submission Format](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Submission-Format)
+  * [Generating a Random Segmentation](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Generate-a-random-segmentation)
+  * [Generating a Random Annotation Object](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Generate-a-random-annotation-object)
+  * [Generating a Random Results Object](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Generate-a-results-object)
+  * [Submit to crowdAI for grading](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Submit-to-crowdAI-for-grading)
+* Train [Mask-RCNN](https://arxiv.org/abs/1703.06870) : `Coming Soon`
 
 # Author   
 Sharada Mohanty <sharada.mohanty@epfl.ch>
