@@ -5,3 +5,4 @@ logs/*
 *.so
 *.o
 .ipynb_checkpoints/
+*.json
