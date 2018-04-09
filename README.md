@@ -53,7 +53,11 @@ jupyter-notebook
 
 * [Locally test the evaluation function](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Local%20Evaluation.ipynb)   
 
-* Train [Mask-RCNN](https://arxiv.org/abs/1703.06870) : `Coming Soon`
+* Train [Mask-RCNN](https://arxiv.org/abs/1703.06870)
+  * [Installation](https://github.com/crowdAI/crowdai-mapping-challenge-mask-rcnn)
+  * [Training](https://github.com/crowdAI/crowdai-mapping-challenge-mask-rcnn/blob/master/Training.ipynb)
+  * [Prediction & Submission](https://github.com/crowdAI/crowdai-mapping-challenge-mask-rcnn/blob/master/Prediction-and-Submission.ipynb)
+  * **NOTE** : This is in a separate repository, and we have also now added the pretrained weights from the baseline submission to the [datasets page](https://www.crowdai.org/challenges/mapping-challenge/dataset_files).
 
 ## Miscelaneous Resources
 * [Convert Annotations from MS COCO format to PascalVOC format](https://github.com/CasiaFan/Dataset_to_VOC_converter/blob/master/anno_coco2voc.py)
