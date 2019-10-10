@@ -1,17 +1,17 @@
-# mapping-challenge-starter-kit
-![CrowdAI-Logo](https://github.com/crowdAI/crowdai/raw/master/app/assets/images/misc/crowdai-logo-smile.svg?sanitize=true)
+# food-recognition-challenge-starter-kit
+![AIcrowd-Logo](https://raw.githubusercontent.com/AIcrowd/AIcrowd/master/app/assets/images/misc/aicrowd-horizontal.png)
 
-[![gitter-badge](https://badges.gitter.im/crowdAI/crowdai-mapping-challenge.png)](https://gitter.im/crowdAI/crowdai-mapping-challenge)
 
 # Installation
 ```
-git clone https://github.com/crowdAI/mapping-challenge-starter-kit
-cd mapping-challenge-starter-kit
-pip install -r requirements.txt
+git clone https://github.com/AIcrowd/food-recognition-challenge-starter-kit
+cd food-recognition-challenge-starter-kit
+pip install  awscli botocore certifi cffi colorama cycler Cython decorator jmespath kiwisolver matplotlib networkx numpy olefile Pillow pyasn1 pycparser pyparsing python-dateutil pytz PyWavelets rsa s3transfer scikit-image scipy six tqdm jupyter-client jupyter-console jupyter-core jupyter-repo2docker jupyterlab jupyterlab-launcher crowdai
+pip install pip install git+https://github.com/AIcrowd/coco.git#subdirectory=PythonAPI
 ```
 
 # Dataset
-Please download the datasets from [https://www.crowdai.org/challenges/mapping-challenge/dataset_files](https://www.crowdai.org/challenges/mapping-challenge/dataset_files), and put them in the `data/` folder. [Untar](http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file) them (this might take some time) to have the following directory structure:
+Please download the datasets from [https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files), and put them in the `data/` folder. [Untar](http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file) them (this might take some time) to have the following directory structure:
 
 ```bash
 |-- data/
@@ -19,11 +19,9 @@ Please download the datasets from [https://www.crowdai.org/challenges/mapping-ch
 |   |-- train/
 |   |   |-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
-|   |   |__ annotation-small.json : Smaller version of the "annotation.json"
 |   |-- val/
 |   |   |-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
-|   |   |__ annotation-small.json : Smaller version of the "annotation.json"
 ```
 
 # Usage
@@ -34,37 +32,21 @@ jupyter-notebook
 ```
 ## Available Notebooks
 
-* [Dataset Utils](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb)
-  * [Import Dependencies](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Import-dependencies)
-  * [Configuration Variables](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Configuration-Variables)
-  * [Parsing Annotations](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Parsing-the-annotations)
-  * [Collecting and Visualizing Images](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Collecting-and-Visualizing-Images)
-  * [Understanding Annotations](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Understanding-Annotations)
-  * [Visualizing Annotations](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Visualizing-Annotations)
-  * [Advanced](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Advanced)
-    * [Convert poly segmentation to rle](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#1.-Convert-poly-segmentation-to-rle)
-    * [Convert segmentation to pixel level masks](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#2.-Convert-segmentation-to-pixel-level-masks)
-* [Random Submission](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb)
-  * [Submission Format](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Submission-Format)
-  * [Generating a Random Segmentation](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Generate-a-random-segmentation)
-  * [Generating a Random Annotation Object](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Generate-a-random-annotation-object)
-  * [Generating a Random Results Object](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Generate-a-results-object)
-  * [Submit to crowdAI for grading](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Random%20Submission.ipynb#Submit-to-crowdAI-for-grading)
-
-* [Locally test the evaluation function](https://github.com/crowdAI/mapping-challenge-starter-kit/blob/master/Local%20Evaluation.ipynb)   
-
-* Train [Mask-RCNN](https://arxiv.org/abs/1703.06870)
-  * [Installation](https://github.com/crowdAI/crowdai-mapping-challenge-mask-rcnn)
-  * [Training](https://github.com/crowdAI/crowdai-mapping-challenge-mask-rcnn/blob/master/Training.ipynb)
-  * [Prediction & Submission](https://github.com/crowdAI/crowdai-mapping-challenge-mask-rcnn/blob/master/Prediction-and-Submission.ipynb)
-  * **NOTE** : This is in a separate repository, and we have also now added the pretrained weights from the baseline submission to the [datasets page](https://www.crowdai.org/challenges/mapping-challenge/dataset_files).
+* [Dataset Utils](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb)
+  * [Import Dependencies](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Import-dependencies)
+  * [Configuration Variables](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Configuration-Variables)
+  * [Parsing Annotations](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Parsing-the-annotations)
+  * [Collecting and Visualizing Images](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Collecting-and-Visualizing-Images)
+  * [Understanding Annotations](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Understanding-Annotations)
+  * [Visualizing Annotations](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Visualizing-Annotations)
+  * [Advanced](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#Advanced)
+    * [Convert poly segmentation to rle](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#1.-Convert-poly-segmentation-to-rle)
+    * [Convert segmentation to pixel level masks](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb#2.-Convert-segmentation-to-pixel-level-masks)
+* [Random Submission](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/run.py)
+* [Locally test the evaluation function](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Local%20Evaluation.ipynb)   
 
 ## Miscelaneous Resources
 * [Convert Annotations from MS COCO format to PascalVOC format](https://github.com/CasiaFan/Dataset_to_VOC_converter/blob/master/anno_coco2voc.py)
 
-# Acknowledgements  
-A big shout out to our awesome community members [@MasterScat (Florian Laurent)](https://www.crowdai.org/participants/masterscrat), [Snigdha Dagar](snigdha.dagar@gmail.com), and [Iuliana Voinea](https://www.crowdai.org/participants/iuliana), for their help in preparing the datasets and designing the challenge.
-
-
 # Author   
-Sharada Mohanty <sharada.mohanty@epfl.ch>
+**[Sharada Mohanty](https://twitter.com/memohanty?lang=en)**
