@@ -1,5 +1,6 @@
 FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     build-essential \
     bzip2 \
