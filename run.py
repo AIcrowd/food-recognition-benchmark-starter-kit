@@ -56,8 +56,8 @@ for _idx, image_path in enumerate(glob.glob(os.path.join(IMAGES_DIR, "*.jpg"))):
     results.append(_result)
 
 print("Writing results to : data/result_annotations.json")
-ANNOTATIONS_OUTPUT_PATH = os.getenv("ANNOTATIONS_OUTPUT_PATH", "./result_annotations.json")
-with open(ANNOTATIONS_OUTPUT_PATH, "w") as fp:
+AICROWD_PREDICTIONS_OUTPUT_PATH = os.getenv("AICROWD_PREDICTIONS_OUTPUT_PATH", "./result_annotations.json")
+with open(AICROWD_PREDICTIONS_OUTPUT_PATH, "w") as fp:
     fp.write(json.dumps(results))
 print("Writing Complete !")
 
