@@ -14,7 +14,6 @@ numpy==1.14.2
 olefile==0.45.1
 Pillow==5.0.0
 pyasn1==0.4.2
-pycocotools==2.0
 pycparser==2.18
 pyparsing==2.2.0
 python-dateutil==2.7.2
