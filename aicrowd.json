@@ -1,0 +1,8 @@
+{
+    "challenge_id" : "aicrowd-food-recognition-challenge",
+    "grader_id": "aicrowd-food-recognition-challenge",
+    "authors" : ["aicrowd-user"],
+    "description" : "Food Recognition Challenge Submission",
+    "license" : "MIT",
+    "gpu": false
+}
