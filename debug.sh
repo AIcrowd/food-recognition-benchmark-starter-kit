@@ -1,8 +1,6 @@
 #!/bin/bash
 
 
-export TEST_IMAGES_PATH="./data/test_images"
-export IMAGE_NAME="aicrowd-food-recognition-challenge-submission"
 
 nvidia-docker run -it \
   --net=host \

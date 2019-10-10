@@ -106,6 +106,23 @@ You can specify the software runtime of your code by modifying the included [Doc
 #### Code Entrypoint
 The evaluator will use `/home/aicrowd/run.sh` as the entrypoint. Please remember to have a `run.sh` at the root which can instantiate any necessary environment variables and execute your code. This repository includes a sample `run.sh` file.
 
+### Local Debug
+
+```
+export TEST_IMAGES_PATH="./data/test_images"
+export IMAGE_NAME="aicrowd-food-recognition-challenge-submission"
+
+./build.sh
+./debug.sh
+
+######################################
+## NOTE : 
+## 
+## * If you do not wish to your a GPU when testing locally, please feel free to replace nvidia-docker with docker
+##
+## * If you want to test on images located at an alternate location, set the `TEST_IMAGES_PATH` environment variable accordingly before running `build.sh` and `debug.sh`.
+```
+
 ### Submitting 
 To make a submission, you will have to create a private repository on [https://gitlab.aicrowd.com](https://gitlab.aicrowd.com).
 
