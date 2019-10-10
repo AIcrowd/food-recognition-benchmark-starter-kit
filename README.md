@@ -8,6 +8,9 @@ We provide a novel dataset of food images collected using the MyFoodRepo project
 
 This is an evolving dataset, where we will release more data as the dataset grows in size.
 
+![image1](https://i.imgur.com/zS2Nbf0.png)
+![image2](https://i.imgur.com/39OS2Gp.png)
+![image3](https://i.imgur.com/wtbiHSz.png)
 
 # Installation
 
@@ -62,6 +65,9 @@ You can access all of them by :
 ```bash
 jupyter-notebook
 ```
+
+![image](https://i.imgur.com/EWIuxYR.png)
+
 ## Available Notebooks
 
 * [Dataset Utils](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dataset%20Utils.ipynb)
