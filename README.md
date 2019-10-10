@@ -81,6 +81,25 @@ jupyter-notebook
 * [Random Submission](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/run.py)
 * [Locally test the evaluation function](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Local%20Evaluation.ipynb)   
 
+# Evaluation Criteria
+
+For for a known ground truth mask **A**, you propose a mask **B**, then we first compute **IoU** (Intersection Over Union) :      
+
+<img src="https://latex.codecogs.com/gif.latex?$$&space;IoU(A,&space;B)&space;=&space;\frac{A&space;\cap&space;B}{&space;A&space;\cup&space;B}&space;$$" title="$$ IoU(A, B) = \frac{A \cap B}{ A \cup B} $$" />
+
+$$IoU$$ measures the overall overlap between the true region and the proposed region.
+Then we consider it a True detection, when there is atleast half an overlap, or when **IoU > 0.5**
+
+Then we can define the following parameters :
+
+* Precision (**IoU > 0.5**)   
+<img src="https://latex.codecogs.com/gif.latex?$$&space;P_{IoU&space;\geq&space;0.5}&space;=&space;\frac{TP_{IoU&space;\geq&space;0.5}}{TP_{IoU&space;\geq&space;0.5}&space;&plus;&space;FP_{IoU&space;\geq&space;0.5}}&space;$$" title="$$ P_{IoU \geq 0.5} = \frac{TP_{IoU \geq 0.5}}{TP_{IoU \geq 0.5} + FP_{IoU \geq 0.5}} $$" />
+
+* Recall (**IoU > 0.5**)   
+<img src="https://latex.codecogs.com/gif.latex?$$&space;R_{IoU&space;\geq&space;0.5}&space;=&space;\frac{TP_{IoU&space;\geq&space;0.5}}{TP_{IoU&space;\geq&space;0.5}&space;&plus;&space;FN_{IoU&space;\geq&space;0.5}}&space;$$." title="$$ R_{IoU \geq 0.5} = \frac{TP_{IoU \geq 0.5}}{TP_{IoU \geq 0.5} + FN_{IoU \geq 0.5}} $$." />
+
+The final scoring parameters **AP_{IoU > 0.5}** and **AR_{IoU > 0.5}** are computed by averaging over all the precision and recall values for all known annotations in the ground truth.
+
 
 # Submission Instructions
 
