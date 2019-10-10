@@ -10,6 +10,13 @@ This is an evolving dataset, where we will release more data as the dataset grow
 
 
 # Installation
+
+Ensure you have `docker` and `nvidia-docker` installed by following the instructions here : 
+
+* [Docker](https://docs.docker.com/install/)
+* [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
+**NOTE** : You do not need nvidia-docker if you do not want to use GPU when testing your submission locally
+
 ```
 git clone https://github.com/AIcrowd/food-recognition-challenge-starter-kit
 cd food-recognition-challenge-starter-kit
@@ -18,17 +25,35 @@ pip install pip install git+https://github.com/AIcrowd/coco.git#subdirectory=Pyt
 ```
 
 # Dataset
-Please download the datasets from [https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files), and put them in the `data/` folder. [Untar](http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file) them (this might take some time) to have the following directory structure:
+
+The dataset for the [AIcrowd Food Recognition Challenge](https://www.aicrowd.com/challenges/food-recognition-challenge) is available at [https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files)
+
+This dataset contains :   
+* `train.tar.gz` : This is the Training Set of **5545** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
+
+* `val.tar.gz`: This is the suggested Validation Set of **291** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
+
+* `test_images.tar.gz` : This is the debug Test Set for Round-1, where you are provided the same images as the validation set.
+
+
+To get started, we would advise you to download all the files, and untar them inside the `data/` folder of this repository, so that you have a directory structure like this : 
 
 ```bash
 |-- data/
-|   |-- test_images/ (has all images for prediction)
+|   |-- test_images/ (has all images for prediction)(**NOTE** : They are the same as the validation set images)
 |   |-- train/
 |   |   |-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
+|   |   |__ annotation-small.json : Smaller version of the previous dataset
 |   |-- val/
 |   |   |-- images (has all the images for training)
 |   |   |__ annotation.json : Annotation of the data in MS COCO format
+|   |   |__ annotation-small.json : Smaller version of the previous dataset
+```
+
+We are also assuming that you have already installed all the requirements for this notebook, or you can still install them by :
+
+
 ```
 
 # Usage
@@ -69,10 +94,11 @@ Each repository should have a aicrowd.json file with the following fields:
     "grader_id": "aicrowd-food-recognition-challenge",
     "authors" : ["aicrowd-user"],
     "description" : "Food Recognition Challenge Submission",
-    "license" : "MIT"
+    "license" : "MIT",
+    "gpu": false
 }
 ```
-This file is used to identify your submission as a part of the Snake Species Identification Challenge.  You must use the `challenge_id` and `grader_id` specified above in the submission. 
+This file is used to identify your submission as a part of the Snake Species Identification Challenge.  You must use the `challenge_id` and `grader_id` specified above in the submission. The `gpu` key in the `aicrowd.json` lets your specify if your submission requires a GPU or not. In which case, a NVIDIA-K80 will be made available to your submission when evaluation the submission.
 
 #### Submission environment configuration
 You can specify the software runtime of your code by modifying the included [Dockerfile](Dockerfile). 
