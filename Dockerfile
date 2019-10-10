@@ -31,7 +31,8 @@ RUN pip3 install pip --upgrade
 RUN pip3 install cython aicrowd_api timeout_decorator \
   numpy \
   matplotlib \
-  aicrowd-repo2docker 
+  aicrowd-repo2docker \
+  pillow
 RUN pip3 install git+https://github.com/AIcrowd/coco.git#subdirectory=PythonAPI
 RUN pip3 install tensorflow-gpu
 
