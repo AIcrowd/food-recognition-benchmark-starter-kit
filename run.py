@@ -5,6 +5,7 @@ import argparse
 import base64
 import glob
 import os
+import traceback
 from PIL import Image
 import aicrowd_helpers
 
