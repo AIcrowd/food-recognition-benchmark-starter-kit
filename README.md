@@ -82,15 +82,12 @@ jupyter-notebook
 * [Locally test the evaluation function](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Local%20Evaluation.ipynb)   
 
 ## Baselines
+* [Colab Notebook for Data Analysis and Tutorial](https://colab.research.google.com/drive/1A5p9GX5X3n6OMtLjfhnH6Oeq13tWNtFO#scrollTo=ok54AWT_VoWV)
+A notebook with data analysis on the Food Recognition Dataset and then a short tutorial on training with keras and pytorch. This lets you immediately jump onto the challenge and solve the challenge
+### Pretrained Baselines
 * [mmdetection (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-pytorch-baseline)  
 * [matterport-maskrcnn (keras - tensorflow)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-recognition)
 
-Also we are providing a notebook with data analysis on the Food Recognition Dataset and then a short tutorial on training with keras and pytorch. This lets you immediately jump onto the challenge and solve the challenge.  
-[Colab Notebook for Data Analysis and Tutorial](https://colab.research.google.com/drive/1A5p9GX5X3n6OMtLjfhnH6Oeq13tWNtFO#scrollTo=ok54AWT_VoWV)
-
-Along with the notebook, we are also releasing the starter codes in both keras (using matterport maskrcnn) and pytorch (using mmdetection). Also, these starter codes have the submission format required to make a successful submission to AICrowd.
-* [mmdetection (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-pytorch-baseline)  
-* [matterport-maskrcnn (keras - tensorflow)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-recognition)
 
 # Evaluation Criteria
 
