@@ -30,12 +30,11 @@ pip install pip install git+https://github.com/AIcrowd/coco.git#subdirectory=Pyt
 The dataset for the [AIcrowd Food Recognition Challenge](https://www.aicrowd.com/challenges/food-recognition-challenge) is available at [https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files)
 
 This dataset contains :   
-* `train.tar.gz` : This is the Training Set of **5545** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
+* `train-v0.2.tar.gz` : This is the Training Set of **7949** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
 
-* `val.tar.gz`: This is the suggested Validation Set of **291** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
+* `val-v0.2.tar.gz`: This is the suggested Validation Set of **418** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
 
-* `test_images.tar.gz` : This is the debug Test Set for Round-1, where you are provided the same images as the validation set.
-
+* `test_images-v0.2.tar.gz` : This is the debug Test Set for Round-1, where you are provided the same images as the validation set.
 
 To get started, we would advise you to download all the files, and untar them inside the `data/` folder of this repository, so that you have a directory structure like this : 
 
