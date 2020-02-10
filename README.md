@@ -21,8 +21,8 @@ Ensure you have `docker` and `nvidia-docker` installed by following the instruct
 ```
 git clone https://github.com/AIcrowd/food-recognition-challenge-starter-kit
 cd food-recognition-challenge-starter-kit
-pip install  awscli botocore certifi cffi colorama cycler Cython decorator jmespath kiwisolver matplotlib networkx numpy olefile Pillow pyasn1 pycparser pyparsing python-dateutil pytz PyWavelets rsa s3transfer scikit-image scipy six tqdm jupyter-client jupyter-console jupyter-core jupyter-repo2docker jupyterlab jupyterlab-launcher crowdai
-pip install pip install git+https://github.com/AIcrowd/coco.git#subdirectory=PythonAPI
+pip3 install -r requirements.txt
+pip3 install git+https://github.com/AIcrowd/coco.git
 ```
 
 # Dataset
