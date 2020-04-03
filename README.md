@@ -232,7 +232,7 @@ cd (repo_name)
 
 #Add AICrowd git remote endpoint
 
-git remote add aicrowd [https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git](https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git)
+git remote add aicrowd https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git
 
 git push aicrowd master
 
