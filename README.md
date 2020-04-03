@@ -160,10 +160,18 @@ export IMAGE_NAME="aicrowd-food-recognition-challenge-submission"
 ```
 
 ### Submitting 
+
+#### Using SSH
 To make a submission, you will have to create a private repository on [https://gitlab.aicrowd.com](https://gitlab.aicrowd.com).
 
 You will have to add your SSH Keys to your GitLab account by following the instructions [here](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html).
 If you do not have SSH Keys, you will first need to [generate one](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair).
+
+*Testing that everything is set up correctly*
+To test whether your SSH key was added correctly, run the following command in your terminal 
+
+ssh -T git@aicrowd.gitlab.com
+
 
 Then you can create a submission by making a *tag push* to your repository, adding the correct git remote and pushing to the remote:
 
@@ -183,9 +191,65 @@ git push aicrowd submission-v0.1
 # Note : If the contents of your repository (latest commit hash) does not change, 
 # then pushing a new tag will not trigger a new evaluation.
 ```
+
+
 You now should be able to see the details of your submission at : 
 [gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/food-recognition-challenge-starter-kit/issues](gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/food-recognition-challenge-starter-kit/issues)
 
+#### Using HTTP (Personal Access Token)
+
+
+## Using http instead of ssh
+
+In order to use http to clone repositories and submit on gitlab:
+
+a) Create a personal access token
+
+1.  Log in to GitLab.
+    
+2.  In the upper-right corner, click your avatar and select Settings.
+    
+3.  On the User Settings menu, select Access Tokens.
+    
+4.  Choose a name and optional expiry date for the token.
+    
+5.  Choose the desired scopes.
+    
+6.  Click the Create personal access token button.
+    
+7.  Save the personal access token somewhere safe, lets call it XXX for now.
+    
+
+Once you leave or refresh the page, you won’t be able to access it again.
+
+b) to clone a repo use the following command:
+
+git clone [https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git](https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git)
+
+c)submit a solution:
+```
+cd into your submission repo on gitlab
+
+cd (repo_name)
+
+#Add AICrowd git remote endpoint
+
+git remote add aicrowd [https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git](https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git)
+
+git push aicrowd master
+
+# Create a tag for your submission and push
+
+git tag -am "submission-v0.1" submission-v0.1
+
+git push aicrowd master
+
+git push aicrowd submission-v0.1
+
+# Note : If the contents of your repository (latest commit hash) does not change,
+
+# then pushing a new tag will not trigger a new evaluation.
+```
 
 **Best of Luck**
 
