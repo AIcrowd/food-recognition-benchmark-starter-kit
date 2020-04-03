@@ -196,10 +196,8 @@ git push aicrowd submission-v0.1
 You now should be able to see the details of your submission at : 
 [gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/food-recognition-challenge-starter-kit/issues](gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/food-recognition-challenge-starter-kit/issues)
 
-#### Using HTTP (Personal Access Token)
 
-
-## Using http instead of ssh
+## Using http instead of ssh (Personal Access Token):
 
 In order to use http to clone repositories and submit on gitlab:
 
