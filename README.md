@@ -222,7 +222,10 @@ Once you leave or refresh the page, you won’t be able to access it again.
 
 b) to clone a repo use the following command:
 
-git clone [https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git](https://oauth2:XXX@gitlab.aicrowd.com/(username)/(repo_name).git)
+git clone https://github.com/AIcrowd/food-recognition-challenge-starter-kit
+
+cd food-recognition-challenge-starter-kit
+
 
 c)submit a solution:
 ```
