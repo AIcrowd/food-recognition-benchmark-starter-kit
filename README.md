@@ -134,7 +134,7 @@ Each repository should have a aicrowd.json file with the following fields:
     "gpu": false
 }
 ```
-This file is used to identify your submission as a part of the Snake Species Identification Challenge.  You must use the `challenge_id` and `grader_id` specified above in the submission. The `gpu` key in the `aicrowd.json` lets your specify if your submission requires a GPU or not. In which case, a NVIDIA-K80 will be made available to your submission when evaluation the submission.
+This file is used to identify your submission as a part of the Food Recognition Challenge.  You must use the `challenge_id` and `grader_id` specified above in the submission. The `gpu` key in the `aicrowd.json` lets your specify if your submission requires a GPU or not. In which case, a NVIDIA-K80 will be made available to your submission when evaluation the submission.
 
 #### Submission environment configuration
 You can specify the software runtime of your code by modifying the included [Dockerfile](Dockerfile). 
