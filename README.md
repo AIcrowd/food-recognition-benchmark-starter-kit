@@ -101,7 +101,7 @@ A notebook with data analysis on the Food Recognition Dataset and then a short t
 
 For for a known ground truth mask **A**, you propose a mask **B**, then we first compute **IoU** (Intersection Over Union) :      
 
-<img src="https://latex.codecogs.com/gif.latex?$$&space;IoU(A,&space;B)&space;=&space;\frac{A&space;\cap&space;B}{&space;A&space;\cup&space;B}&space;$$" title="$$ IoU(A, B) = \frac{A \cap B}{ A \cup B} $$" />
+<img src="https://latex.codecogs.com/svg.latex?IoU(A,B)=\frac{A{\cap}B}{A{\cup}B}" title="$$ IoU(A, B) = \frac{A \cap B}{ A \cup B} $$" />
 
 $$IoU$$ measures the overall overlap between the true region and the proposed region.
 Then we consider it a True detection, when there is atleast half an overlap, or when **IoU > 0.5**
@@ -109,7 +109,7 @@ Then we consider it a True detection, when there is atleast half an overlap, or 
 Then we can define the following parameters :
 
 * Precision (**IoU > 0.5**)   
-<img src="https://latex.codecogs.com/gif.latex?$$&space;P_{IoU&space;\geq&space;0.5}&space;=&space;\frac{TP_{IoU&space;\geq&space;0.5}}{TP_{IoU&space;\geq&space;0.5}&space;&plus;&space;FP_{IoU&space;\geq&space;0.5}}&space;$$" title="$$ P_{IoU \geq 0.5} = \frac{TP_{IoU \geq 0.5}}{TP_{IoU \geq 0.5} + FP_{IoU \geq 0.5}} $$" />
+<img src="https://latex.codecogs.com/svg.latex?P_{IoU\geq0.5}=\frac{TP_{IoU\geq0.5}}{TP_{IoU\geq0.5}+FP_{IoU\geq0.5}}" title="$$ P_{IoU \geq 0.5} = \frac{TP_{IoU \geq 0.5}}{TP_{IoU \geq 0.5} + FP_{IoU \geq 0.5}} $$" />
 
 * Recall (**IoU > 0.5**)   
 <img src="https://latex.codecogs.com/gif.latex?$$&space;R_{IoU&space;\geq&space;0.5}&space;=&space;\frac{TP_{IoU&space;\geq&space;0.5}}{TP_{IoU&space;\geq&space;0.5}&space;&plus;&space;FN_{IoU&space;\geq&space;0.5}}&space;$$." title="$$ R_{IoU \geq 0.5} = \frac{TP_{IoU \geq 0.5}}{TP_{IoU \geq 0.5} + FN_{IoU \geq 0.5}} $$." />
@@ -262,3 +262,8 @@ git push aicrowd submission-v0.1
 
 # ✍️ Author   
 **[Sharada Mohanty](https://twitter.com/memohanty?lang=en)**
+
+## ✨ Contributers
+**[Nikhil Rayaprolu](https://github.com/nikhilrayaprolu)**
+**[Pulkit Gera](https://github.com/darthgera123)**
+**[Shivam Khandelwal](https://twitter.com/skbly7?lang=en)**
