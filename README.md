@@ -1,7 +1,7 @@
 # food-recognition-challenge-starter-kit
 ![AIcrowd-Logo](https://raw.githubusercontent.com/AIcrowd/AIcrowd/master/app/assets/images/misc/aicrowd-horizontal.png)
 
-# Problem Statement
+# 🕵️ Problem Statement
 
 The goal of this challenge is to train models which can look at images of food items and detect the individual food items present in them.
 We provide a novel dataset of food images collected using the MyFoodRepo project where numerous volunteer Swiss users provide images of their daily food intake. The images have been hand labelled by a group of experts to map the individual food items to an ontology of Swiss Food items.
@@ -10,7 +10,7 @@ This is an evolving dataset, where we will release more data as the dataset grow
 
 ![image1](https://i.imgur.com/zS2Nbf0.png)
 
-# Installation
+# 💻 Installation
 
 Ensure you have `docker` and `nvidia-docker` installed by following the instructions here : 
 
@@ -25,16 +25,16 @@ pip3 install -r requirements.txt
 pip3 install git+https://github.com/AIcrowd/coco.git
 ```
 
-# Dataset
+# 💾 Dataset
 
 The dataset for the [AIcrowd Food Recognition Challenge](https://www.aicrowd.com/challenges/food-recognition-challenge) is available at [https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files)
 
 This dataset contains :   
-* `train-v0.2.tar.gz` : This is the Training Set of **7949** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
+* `train-v0.4.tar.gz` : This is the Training Set of **24120** (as RGB images) food images, along with their corresponding **39328** annotations in [MS-COCO format](http://cocodataset.org/#home)
 
-* `val-v0.2.tar.gz`: This is the suggested Validation Set of **418** (as RGB images) food images, along with their corresponding annotations in [MS-COCO format](http://cocodataset.org/#home)
+* `val-v0.4.tar.gz`: This is the suggested Validation Set of **1269** (as RGB images) food images, along with their corresponding **2053** annotations in [MS-COCO format](http://cocodataset.org/#home)
 
-* `test_images-v0.2.tar.gz` : This is the debug Test Set for Round-1, where you are provided the same images as the validation set.
+* `test_images-v0.4.tar.gz` : This is the debug Test Set for Round-3, where you are provided the same images as the validation set.
 
 To get started, we would advise you to download all the files, and untar them inside the `data/` folder of this repository, so that you have a directory structure like this : 
 
@@ -80,21 +80,24 @@ jupyter-notebook
 * [Random Submission](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/run.py)
 * [Locally test the evaluation function](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Local%20Evaluation.ipynb)   
 
-## Baselines
-# Round 1
+# 📚 Baselines
+## Round 1
 * [Colab Notebook for Data Analysis and Tutorial](https://colab.research.google.com/drive/1A5p9GX5X3n6OMtLjfhnH6Oeq13tWNtFO#scrollTo=ok54AWT_VoWV)
 A notebook with data analysis on the Food Recognition Dataset and then a short tutorial on training with keras and pytorch. This lets you immediately jump onto the challenge and solve the challenge
 ### Pretrained Baselines
 * [mmdetection (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-pytorch-baseline)  
 * [matterport-maskrcnn (keras - tensorflow)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-recognition)
 
-# Round 2
+## Round 2
 * [Colab Notebook for Data Analysis and Tutorial](https://colab.research.google.com/drive/1vXdv9quZ7CXO5lLCjhyz3jtejRzDq221)
 A notebook with data analysis on the Food Recognition Dataset and then a short tutorial on training with keras and pytorch. This lets you immediately jump onto the challenge and solve the challenge
 ### Pretrained Baselines
-* [mmdetection (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-round2)  
+* [mmdetection (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-round2) 
 
-# Evaluation Criteria
+## Round 3
+* Cooking right now!! 🍳  Coming soon 😉
+
+# 🖊 Evaluation Criteria
 
 For for a known ground truth mask **A**, you propose a mask **B**, then we first compute **IoU** (Intersection Over Union) :      
 
@@ -114,7 +117,7 @@ Then we can define the following parameters :
 The final scoring parameters **AP_{IoU > 0.5}** and **AR_{IoU > 0.5}** are computed by averaging over all the precision and recall values for all known annotations in the ground truth.
 
 
-# Submission Instructions
+# 🚀 Submission Instructions
 
 To submit to the challenge you'll need to ensure you've set up an appropriate repository structure, create a private git repository at https://gitlab.aicrowd.com with the contents of your submission, and push a git tag corresponding to the version of your repository you'd like to submit.
 
@@ -257,5 +260,5 @@ git push aicrowd submission-v0.1
 ## Miscelaneous Resources
 * [Convert Annotations from MS COCO format to PascalVOC format](https://github.com/CasiaFan/Dataset_to_VOC_converter/blob/master/anno_coco2voc.py)
 
-# Author   
+# ✍️ Author   
 **[Sharada Mohanty](https://twitter.com/memohanty?lang=en)**
