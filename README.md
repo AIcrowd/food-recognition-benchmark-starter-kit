@@ -1,5 +1,16 @@
-# food-recognition-challenge-starter-kit
-![AIcrowd-Logo](https://raw.githubusercontent.com/AIcrowd/AIcrowd/master/app/assets/images/misc/aicrowd-horizontal.png)
+# Food Recognition Challenge - Starter Kit
+
+![Food-Challenge](https://i.imgur.com/0G3PEc7.png)
+
+
+- 💪 &nbsp;Challenge Page: https://www.aicrowd.com/challenges/food-recognition-challenge
+- 🗣️ &nbsp;Discussion Forum: https://www.aicrowd.com/challenges/food-recognition-challenge/discussion
+- 🏆 &nbsp;Leaderboard: https://www.aicrowd.com/challenges/food-recognition-challenge/leaderboards
+
+<p align="center">
+ <a href="https://discord.gg/GTckBMx"><img src="https://img.shields.io/discord/657211973435392011?style=for-the-badge" alt="chat on Discord"></a>
+</p>
+
 
 # 🕵️ Problem Statement
 
@@ -9,6 +20,7 @@ We provide a novel dataset of food images collected using the MyFoodRepo project
 This is an evolving dataset, where we will release more data as the dataset grows in size.
 
 ![image1](https://i.imgur.com/zS2Nbf0.png)
+
 
 # 💻 Installation
 
@@ -263,7 +275,8 @@ git push aicrowd submission-v0.1
 # ✍️ Author   
 **[Sharada Mohanty](https://twitter.com/memohanty?lang=en)**
 
-## ✨ Contributers
-**[Nikhil Rayaprolu](https://github.com/nikhilrayaprolu)**
-**[Pulkit Gera](https://github.com/darthgera123)**
-**[Shivam Khandelwal](https://twitter.com/skbly7?lang=en)**
+### ✨ Contributers
+
+* [Nikhil Rayaprolu](https://github.com/nikhilrayaprolu)
+* [Pulkit Gera](https://github.com/darthgera123)
+* [Shivam Khandelwal](https://twitter.com/skbly7?lang=en)
