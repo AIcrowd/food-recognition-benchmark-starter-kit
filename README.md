@@ -185,7 +185,7 @@ If you do not have SSH Keys, you will first need to [generate one](https://docs.
 *Testing that everything is set up correctly*
 To test whether your SSH key was added correctly, run the following command in your terminal 
 
-ssh -T git@aicrowd.gitlab.com
+ssh -T git@gitlab.aicrowd.com
 
 
 Then you can create a submission by making a *tag push* to your repository, adding the correct git remote and pushing to the remote:
