@@ -1,67 +1,45 @@
-FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
+FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    bzip2 \
-    cmake \
-    curl \
-    git \
-    g++ \
-    libboost-all-dev \
-    pkg-config \
-    rsync \
-    software-properties-common \
-    sudo \
-    tar \
-    timidity \
-    unzip \
-    wget \
-    locales \
-    zlib1g-dev \
-    python3-dev \
-    python3 \
-    python3-pip \
-    python3-tk \
-    libjpeg-dev \
-    libpng-dev
 
-# Python3
-RUN pip3 install pip --upgrade
-RUN pip3 install cython aicrowd_api timeout_decorator \
-  numpy \
-  matplotlib \
-  aicrowd-repo2docker \
-  pillow
-RUN pip3 install git+https://github.com/AIcrowd/coco.git#subdirectory=PythonAPI
-RUN pip3 install tensorflow-gpu
+# Install needed apt packages
+COPY apt.txt apt.txt
+RUN apt -qq update && xargs -a apt.txt apt -qq install -y --no-install-recommends \
+ && rm -rf /var/cache/*
 
-# Unicode support:
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+# Create user home directory
+ENV USER aicrowd
+ENV HOME_DIR /home/$USER
 
-# Enables X11 sharing and creates user home directory
-ENV USER_NAME aicrowd
-ENV HOME_DIR /home/$USER_NAME
-#
-# Replace HOST_UID/HOST_GUID with your user / group id (needed for X11)
-ENV HOST_UID 1000
-ENV HOST_GID 1000
+# Replace HOST_UID/HOST_GUID with your user / group id
+ENV HOST_UID 1001
+ENV HOST_GID 1001
 
-RUN export uid=${HOST_UID} gid=${HOST_GID} && \
-    mkdir -p ${HOME_DIR} && \
-    echo "$USER_NAME:x:${uid}:${gid}:$USER_NAME,,,:$HOME_DIR:/bin/bash" >> /etc/passwd && \
-    echo "$USER_NAME:x:${uid}:" >> /etc/group && \
-    echo "$USER_NAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER_NAME && \
-    chmod 0440 /etc/sudoers.d/$USER_NAME && \
-    chown ${uid}:${gid} -R ${HOME_DIR}
+# Use bash as default shell, rather than sh
+ENV SHELL /bin/bash
 
-USER ${USER_NAME}
+# Set up user
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${HOST_UID} \
+    ${USER}
+USER ${USER}
 WORKDIR ${HOME_DIR}
+ENV CONDA_DIR ${HOME_DIR}/.conda
+ENV PATH ${CONDA_DIR}/bin:${PATH}
 
-COPY . .
+# Download miniconda for python
+RUN wget -nv -O miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.2-Linux-x86_64.sh \
+ && bash miniconda.sh -b -p ${CONDA_DIR} \
+ && . ${CONDA_DIR}/etc/profile.d/conda.sh \
+ && rm -rf miniconda.sh \
+ && conda clean -a -y
 
-RUN sudo chown ${HOST_UID}:${HOST_GID} -R *
-RUN sudo chmod 775 -R *
+# Install needed pypi packages
+USER ${USER}
+RUN pip install numpy cython --no-cache-dir
+COPY --chown=1001:1001 requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy user files
+COPY --chown=1001:1001 . ${HOME_DIR}
