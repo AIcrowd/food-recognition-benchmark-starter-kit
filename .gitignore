@@ -5,3 +5,5 @@ logs/*
 *.so
 *.o
 .ipynb_checkpoints/
+__pycache__
+.idea

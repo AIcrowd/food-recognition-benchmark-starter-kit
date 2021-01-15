@@ -1,3 +1,5 @@
 #!/bin/bash
 
-python3 run.py
+set -e
+
+python run.py

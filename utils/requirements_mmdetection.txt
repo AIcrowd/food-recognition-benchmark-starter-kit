@@ -1,0 +1,7 @@
+cython
+numpy
+aicrowd-api
+timeout_decorator
+git+https://github.com/AIcrowd/coco.git#subdirectory=PythonAPI
+git+https://github.com/open-mmlab/mmdetection.git@v2.3.0
+

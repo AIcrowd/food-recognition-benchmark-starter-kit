@@ -1,13 +1,6 @@
 #!/bin/bash
 
+export AICROWD_TEST_IMAGES_PATH="path-to-your-validation-test-images"
+export AICROWD_PREDICTIONS_OUTPUT_PATH="predictions.json"
 
-
-nvidia-docker run -it \
-  --net=host \
-  -v ${TEST_IMAGES_PATH}:/test_images \
-  -v /tmp:/tmp_host \
-  -e AICROWD_IS_GRADING=True \
-  -e AICROWD_TEST_IMAGES_PATH="/test_images" \
-  -e AICROWD_PREDICTIONS_OUTPUT_PATH="/tmp/output.json" \
-  $IMAGE_NAME \
-  /home/aicrowd/run.sh
+./run.sh
