@@ -9,7 +9,7 @@ repository.
 The easiest way to install `mmdetection` is to use the pytorch docker image and
 use the `requirements_mmdetection.txt` provided in this directory.
 
-Make the following changes to the Dockerfile
+Make the following changes to the [Dockerfile](https://github.com/AIcrowd/food-recognition-challenge-starter-kit/blob/master/Dockerfile)
 
 ```diff
 - RUN wget -nv -O miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.2-Linux-x86_64.sh \
