@@ -3,15 +3,11 @@ from predict_random import RandomPredictor
 # Predictor which does nothing
 random_predictor = RandomPredictor()
 
-# UMX needs `models` folder to be present in your submission, check test_umx.py to learn more
-# umx_predictor = UMXPredictor()
+# mmdetection needs `models` folder to be present in your submission, check predict_mmdetection.py to learn more
+# mmdetection_predictor = MMDetectionPredictor()
 
-# X-UMX needs `models` folder to be present in your submission, check test_xumx.py to learn more
-# xumx_predictor = XUMXPredictor()
-
-# UMXL needs `models` folder to be present in your submission, check test_umxl.py to learn more
-# Reminder: Set `external_dataset_used` to `true` in your `aicrowd.yaml` if your are using UMXL
-# umxl_predictor = UMXLPredictor()
+# maskrcnn needs `models` folder to be present in your submission, check predict_maskrcnn.py to learn more
+# maskrcnn_predictor = MaskRCNNPredictor()
 
 """
 PARTICIPANT_TODO: The implementation you want to submit as your submission
