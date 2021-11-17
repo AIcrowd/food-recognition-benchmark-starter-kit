@@ -1,5 +1,5 @@
+boto3
 cython
 numpy
-aicrowd-api
 Pillow
 git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI

@@ -1,5 +1,2 @@
 #!/bin/bash
-
-set -e
-
-python run.py
+python predict.py
