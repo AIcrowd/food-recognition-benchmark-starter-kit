@@ -2,4 +2,4 @@ boto3
 cython
 numpy
 Pillow
-git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
+pycocotools==2.0.3

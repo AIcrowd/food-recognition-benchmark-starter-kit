@@ -9,6 +9,9 @@ random_predictor = RandomPredictor()
 # maskrcnn needs `models` folder to be present in your submission, check predict_maskrcnn.py to learn more
 # maskrcnn_predictor = MaskRCNNPredictor()
 
+# Your own implementation
+# my_predictor = MyPredictor()
+
 """
 PARTICIPANT_TODO: The implementation you want to submit as your submission
 """
