@@ -1,6 +1,5 @@
 {
-  "challenge_id" : "aicrowd-food-recognition-challenge",
-  "grader_id": "aicrowd-food-recognition-challenge",
+  "challenge_id" : "food-recognition-challenge-2022",
   "authors" : ["aicrowd-bot"],
   "description" : "Food Recognition Challenge Submission",
   "license" : "MIT",
