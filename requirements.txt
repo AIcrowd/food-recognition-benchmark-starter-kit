@@ -3,3 +3,5 @@ cython
 numpy
 Pillow
 pycocotools==2.0.3
+pandas
+aicrowd-repo2docker
