@@ -2,27 +2,15 @@
 
 ![Food-Challenge](https://i.imgur.com/haaT8Cu_d.webp?maxwidth=1520&fidelity=grand)
 
-----
+<p align="center"><a href="https://discord.gg/GTckBMx"><img src="https://img.shields.io/discord/657211973435392011?style=for-the-badge" alt="chat on Discord"></a></p>
 
+
+<p align="center">This repository is the main Food Recognition Benchmark template and Starter kit!</p>
+<p align="center">Clone the repository to compete now!</p>
 <p align="center">
- <a href="https://discord.gg/GTckBMx"><img src="https://img.shields.io/discord/657211973435392011?style=for-the-badge" alt="chat on Discord"></a>
-</p>
-
----
-
-
-<center>
-
-This repository is the main Food Recognition Benchmark template and Starter kit!
-
-Clone the repository to compete now!
-
-👉 [Benchmark Website](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022)
-
-</center>
+<a href="https://www.aicrowd.com/challenges/food-recognition-benchmark-2022">👉 Benchmark Website</a></p>
 
 ----
-<br><br><br>
 
 # 🏆 About the Benchmark
 
@@ -45,6 +33,15 @@ The goal of this benchmark is to train models which can look at images of food i
 * [Running the code locally](#running-the-code-locally)
 </details>
 
+
+<details align="left">
+<summary>👥 Participation</summary>
+
+* [Quick Participation 🏃](#-participation)
+* [Active Participation 👨‍💻](#-participation)
+</details>
+
+
 <details align="left">
 <summary>🧩 Repository Structure</summary>
 
@@ -55,23 +52,12 @@ The goal of this benchmark is to train models which can look at images of food i
 <details align="left">
 <summary>🚀 Submission</summary>
 
-* [Prepare your environment](#prepare-your-environment)
-  + [`Dockerfile`](#dockerfile)
-  + [`apt.txt`](#apttxt)
-  + [`requirements.txt`](#requirementstxt)
-* [Initial setup](#initial-setup)
-* [Submit to AIcrowd](#submit-to-aicrowd)
+
+* [Quick Participation 🏃](#-submission)
+* [Active Participation 👨‍💻](#-submission)
 </details>
 
-
-<details align="left">
-<summary>🛠 Troubleshooting</summary>
-
-* [My submission failed. How do I know what happened?](#my-submission-failed-how-do-i-know-what-happened)
-* [My docker builds fail. Can I reproduce this locally?](#my-docker-builds-fail-can-i-reproduce-this-locally)
-</details>
-
-<br><br>
+<br>
 
 # 💪 Getting Started
 
@@ -99,9 +85,6 @@ pip install -r requirements.txt
 ```
 
 This will generate `predictions.json` file in your current directory.
-
-<br><br>
-
 
 # 👥 Participation
 
@@ -134,8 +117,6 @@ Before we do a deep dive into submissions. Check which user persona suits you th
 </tbody>
 </table>
 
-<br><br>
-
 # 🧩 Repository structure
 
 ## Required files
@@ -157,11 +138,10 @@ Before we do a deep dive into submissions. Check which user persona suits you th
 `utils/requirements_detectron2.txt` | A sample `requirements.txt` file for using `detectron2`
 `utils/requirements_mmdetection.txt` | A sample `requirements.txt` file for using `mmdetection`
 
-<br><br>
 # 🚀 Submission
 
 
-## Quick Participation
+## Quick Participation 🏃
 
 As promised, we will keep it quick for you. Participating is as simple as:
 
@@ -169,7 +149,7 @@ As promised, we will keep it quick for you. Participating is as simple as:
 - Upload them on the [benchmark website](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/submissions/new)
 - Get scores, iterate, improve! 💪
 
-## Active Participation
+## Active Participation 👨‍💻
 
 - Prepare your runtime environment
 - Setup SSH keys for your AIcrowd repository
@@ -177,8 +157,6 @@ As promised, we will keep it quick for you. Participating is as simple as:
 - Get scores, **more scores** 😉, iterate faster, improve faster! 💪
 
 More details for active participation in present in [SUBMISSION.md](/utils/SUBMISSION.md)
-
-<br><br>
 
 # 📎 Important links
 
@@ -199,7 +177,6 @@ More details for active participation in present in [SUBMISSION.md](/utils/SUBMI
 - External resources:
   * [Convert Annotations from MS COCO format to PascalVOC format](https://github.com/CasiaFan/Dataset_to_VOC_converter/blob/master/anno_coco2voc.py)
   
-<br><br>
 # ✍️ Maintainers
 * **[Sharada Mohanty](https://twitter.com/memohanty?lang=en)**
 * **[Shivam Khandelwal](https://twitter.com/skbly7?lang=en)**
