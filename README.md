@@ -14,8 +14,7 @@
 
 # 🏆 About the Benchmark
 
-<img src="https://i.imgur.com/0R5lo98.png" width="300">
-<img src="https://i.imgur.com/hkG46h3_d.webp?maxwidth=300&fidelity=grand" width="300">
+<img src="https://i.imgur.com/YvIIgOZ.png">
 
 This data set has been annotated - or automatic annotations have been verified - with respect to segmentation, classification (mapping the individual food items onto an ontology of Swiss Food items), and weight/volume estimation.
 
