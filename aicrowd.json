@@ -1,7 +1,7 @@
 {
-  "challenge_id" : "food-recognition-challenge-2022",
+  "challenge_id" : "food-recognition-benchmark-2022",
   "authors" : ["aicrowd-bot"],
-  "description" : "Food Recognition Challenge Submission",
+  "description" : "Food Recognition Benchmark Submission",
   "license" : "MIT",
   "gpu": false
 }

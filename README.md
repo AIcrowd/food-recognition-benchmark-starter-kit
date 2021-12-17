@@ -1,84 +1,140 @@
-# <center>Food Recognition Challenge - Starter Kit</center>
+# <center>Food Recognition Benchmark - Starter Kit</center>
 
-![Food-Challenge](https://i.imgur.com/0G3PEc7.png)
+![Food-Challenge](https://i.imgur.com/haaT8Cu_d.webp?maxwidth=1520&fidelity=grand)
+
+----
 
 <p align="center">
  <a href="https://discord.gg/GTckBMx"><img src="https://img.shields.io/discord/657211973435392011?style=for-the-badge" alt="chat on Discord"></a>
 </p>
 
+---
+
+
+<center>
+
+This repository is the main Food Recognition Benchmark template and Starter kit!
+
+Clone the repository to compete now!
+
+👉 [Benchmark Website](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022)
+
+</center>
+
+----
+<br><br><br>
+
+# 🏆 About the Benchmark
+
+<img src="https://i.imgur.com/0R5lo98.png" width="300">
+<img src="https://i.imgur.com/hkG46h3_d.webp?maxwidth=300&fidelity=grand" width="300">
+
+This data set has been annotated - or automatic annotations have been verified - with respect to segmentation, classification (mapping the individual food items onto an ontology of Swiss Food items), and weight/volume estimation.
+
+The goal of this benchmark is to train models which can look at images of food items and detect the individual food items present in them. 
+
+![](https://i.imgur.com/xzQkwKV.jpg)
+
 # Table of contents
-- [💪 Getting Started](#-getting-started)
-  * [Using this repository](#using-this-repository)
-  * [Using colab starter kit](#using-colab-starter-kit)
-  * [Running the code locally](#running-the-code-locally)
-- [🧩 Repository structure](#-repository-structure)
-  * [Required files](#required-files)
-  * [Other files](#other-files)
-- [🚀 Submission](#-submission)
-  * [Prepare your environment](#prepare-your-environment)
-    + [`Dockerfile`](#dockerfile)
-    + [`apt.txt`](#apttxt)
-    + [`requirements.txt`](#requirementstxt)
-  * [Initial setup](#initial-setup)
-  * [Submit to AIcrowd](#submit-to-aicrowd)
-- [🛠 Troubleshooting](#-troubleshooting)
-  * [My submission failed. How do I know what happened?](#my-submission-failed-how-do-i-know-what-happened)
-  * [My docker builds fail. Can I reproduce this locally?](#my-docker-builds-fail-can-i-reproduce-this-locally)
-- [📎 Important links](#-important-links)
-- [✍️ Author](#-author)
-  * [✨ Contributors](#-contributors)
+
+<details align="left">
+<summary>💪 Getting Started</summary>
+
+* [Using this repository](#using-this-repository)
+* [Using colab starter kit](#using-colab-starter-kit)
+* [Running the code locally](#running-the-code-locally)
+</details>
+
+<details align="left">
+<summary>🧩 Repository Structure</summary>
+
+* [Required files](#required-files)
+* [Other files](#other-files)
+</details>
+
+<details align="left">
+<summary>🚀 Submission</summary>
+
+* [Prepare your environment](#prepare-your-environment)
+  + [`Dockerfile`](#dockerfile)
+  + [`apt.txt`](#apttxt)
+  + [`requirements.txt`](#requirementstxt)
+* [Initial setup](#initial-setup)
+* [Submit to AIcrowd](#submit-to-aicrowd)
+</details>
 
 
+<details align="left">
+<summary>🛠 Troubleshooting</summary>
+
+* [My submission failed. How do I know what happened?](#my-submission-failed-how-do-i-know-what-happened)
+* [My docker builds fail. Can I reproduce this locally?](#my-docker-builds-fail-can-i-reproduce-this-locally)
+</details>
+
+<br><br>
 
 # 💪 Getting Started
 
-The dataset for this challenge is available on the [challenge's resources page](https://www.aicrowd.com/challenges/food-recognition-challenge/dataset_files).
+## Download Dataset
+
+[![](https://i.imgur.com/EnD7Rvl.png)](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/dataset_files)
+
 
 ## Using this repository
-This repository contains the code for a random agent. To run the code locally,
 
-- Clone the repository
-- Install dependencies
-- Execute `run.sh`
+This repository contains prediction codebase for `mmdetection`, `detectron2` and random agents.
 
-Clone the repository
 ```bash
+# Clone the repository
 git clone https://github.com/AIcrowd/food-recognition-challenge-starter-kit
 cd food-recognition-challenge-starter-kit
-```
 
-Install dependencies
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-Update the value for `AICROWD_TEST_IMAGES_PATH` to point to your validation dataset
-and run `debug.sh`
-```bash
-./debug.sh
-```
+# Download the dataset, and place it in `data/images/`
 
-During the evaluation, we will execute `run.sh`. You can add any additional commands
-as per your needs.
-
-## Using colab starter kit
-
-We prepared a colab notebook that uses `detectron2`. You can train your agent and make
-a submission from your notebook!
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1F2IbqpI0ecbRDCNiBLPFCCOVEK0cgbH7?usp=sharing)
-
-## Running the code locally
-
-- First, make sure that you have the dataset downloaded.
-- Update the value of `AICROWD_TEST_IMAGES_PATH` in `debug.sh` file to point to your dataset
-- Execute `debug.sh`
-
-```bash
-./debug.sh
+# Run model locally
+./run.sh
 ```
 
 This will generate `predictions.json` file in your current directory.
+
+<br><br>
+
+
+# 👥 Participation
+
+Before we do a deep dive into submissions. Check which user persona suits you the best!
+
+<table style="undefined;table-layout: fixed; width: 602px">
+<colgroup>
+<col style="width: 301px">
+<col style="width: 301px">
+</colgroup>
+<thead>
+  <tr>
+    <th>Quick Participation 🏃</th>
+    <th>Active Participation 👨‍💻</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>You need to upload json prediction files</td>
+    <td>You need to submit code (and AIcrowd evaluators runs the code to generate predictions)</td>
+  </tr>
+  <tr>
+    <td>Scores are computed on 40% of the publicly released test set </td>
+    <td>Scores are computed on 100% of the publicly released test set + 40% of the (unreleased) extended test set</td>
+  </tr>
+  <tr>
+    <td>You are not eligible for the final leaderboard (and prizes)</td>
+    <td>You are eligible for the final leaderboard and prizes</td>
+  </tr>
+</tbody>
+</table>
+
+<br><br>
 
 # 🧩 Repository structure
 
@@ -86,131 +142,50 @@ This will generate `predictions.json` file in your current directory.
 
 **File** | **Description**
 --- | ---
-`Dockerfile` | Configuration file to build docker images used during evaluation
 `aicrowd.json` | A configuration file used to identify the challenge and resources needed for evaluation
-`aicrowd_helpers.py`<sup>#</sup> | Helpers file used to relay evaluation progress
 `apt.txt` | List of packages that should be installed (via `apt`) for your code to run
 `requirements.txt` | List of python packages that should be installed (via `pip`) for your code to run
-`run.sh` | Entry point to your code
+`predict.py` | Entry point to your model
 
-<sup>#</sup> Do not edit these files.
 
-## Other files
+## Other important files
 
 **File** | **Description**
 --- | ---
-`run.py` | Python script to generate random predictions
-`debug.sh` | Helps your run your code locally
+`score.py` | Helps your generate score for your run locally
 `utils/` | Directory containing some useful scripts and notebooks
 `utils/requirements_detectron2.txt` | A sample `requirements.txt` file for using `detectron2`
 `utils/requirements_mmdetection.txt` | A sample `requirements.txt` file for using `mmdetection`
 
-
+<br><br>
 # 🚀 Submission
 
-## Prepare your environment
 
-There are three files that help you setup your environment.
-1. `Dockerfile`
-2. `apt.txt`
-3. `requirements.txt`
+## Quick Participation
 
-### `Dockerfile`
-If you plan to use GPU, please make sure that you are using an appropriate `CUDA` and
-`CUDNN` versions. You can specify these at the top of your [`Docerfile`](Dockerfile#L1).
+As promised, we will keep it quick for you. Participating is as simple as:
 
-### `apt.txt`
-If there are certain system level packages that you need, you can specify them in your
-`apt.txt`. If you are familiar with ubuntu/debian, this is same as installing these
-packages using `apt-get install` command.
+- Generate your predictions using the starter kit
+- Upload them on the [benchmark website](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/submissions/new)
+- Get scores, iterate, improve! 💪
 
-### `requirements.txt`
-You can specify the list of python packages that need to be installed in your
-`requirements.txt`.
+## Active Participation
 
-Please note that we are using `apt.txt` and `requirements.txt` in the `Dockerfile` to
-install required packages. We believe that this makes it easier for you to add the
-required packages without much hassle. If you are comfortable with docker, you are
-free to edit the `Dockerfile` as needed.
+- Prepare your runtime environment
+- Setup SSH keys for your AIcrowd repository
+- Make submissions by simple git tag pushes
+- Get scores, **more scores** 😉, iterate faster, improve faster! 💪
 
-## Initial setup
+More details for active participation in present in [SUBMISSION.md](/utils/SUBMISSION.md)
 
-Before you submit to AIcrowd, you need to setup SSH access to our GitLab instance.
-This is a one-time requirement to setup your repository.
-
-This process involves
-1. Cloning the repository
-2. Replace git origin to point to your personal repository
-3. Setup SSH key
-
-To clone the repository, please refer getting started section.
-
-Now, you need to point the repository to your personal repository on AIcrowd GitLab.
-
-```bash
-git remote set-url origin git@gitlab.aicrowd.com:<your-aicrowd-username>/food-recognition-challenge-starter-kit.git
-```
-
-To be able to push your code to GitLab, you should setup SSH keys first. Please
-follow the instructions at
-[https://discourse.aicrowd.com/t/how-to-add-ssh-key-to-gitlab/2603](https://discourse.aicrowd.com/t/how-to-add-ssh-key-to-gitlab/2603)
-
-## Submit to AIcrowd
-
-To submit to AIcrowd, you need to push a tag starting with `submission-` to GitLab.
-
-Add the changes to git.
-
-```bash
-git add --all
-git commit -m "<brief summary of changes>"
-```
-
-You need to add large files via `git-lfs`.
-
-```bash
-git lfs install
-
-# Add all the files larger than 5 MB to LFS
-find . -type f -size +5M -exec git lfs migrate import --include={} &> /dev/null \;
-```
-
-For more information on using LFS, please refer
-[uploading large files to GitLab](https://discourse.aicrowd.com/t/how-to-upload-large-files-size-to-your-submission/2304).
-
-Create and push the tag
-
-```bash
-# You can replace "-initial-version" with something that describes your submission
-git tag -am "submission-initial-version" "submission-initial-version"
-git lfs push origin master
-git push origin master
-git push origin submission-initial-version
-```
-
-# 🛠 Troubleshooting
-
-## My submission failed. How do I know what happened?
-
-If you make a submission in `debug` mode, we provide the outputs from your code on the
-GitLab issue page corresponding to your submission. To make a submission in `debug`
-mode, you need to add `"debug": true` in your `aicrowd.json`. Please note that the
-debug mode submission will not be considered for leaderboard.
-
-## My docker builds fail. Can I reproduce this locally?
-
-You can build the images locally by running the following
-
-```bash
-docker build .
-```
+<br><br>
 
 # 📎 Important links
 
 
-- 💪 &nbsp;Challenge Page: https://www.aicrowd.com/challenges/food-recognition-challenge
-- 🗣️ &nbsp;Discussion Forum: https://www.aicrowd.com/challenges/food-recognition-challenge/discussion
-- 🏆 &nbsp;Leaderboard: https://www.aicrowd.com/challenges/food-recognition-challenge/leaderboards
+- 💪 &nbsp;Challenge Page: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022
+- 🗣️ &nbsp;Discussion Forum: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/discussion
+- 🏆 &nbsp;Leaderboard: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/leaderboards
 - Resources - Round 1
   * [Colab Notebook for Data Analysis and Tutorial](https://colab.research.google.com/drive/1A5p9GX5X3n6OMtLjfhnH6Oeq13tWNtFO#scrollTo=ok54AWT_VoWV)
   * [Baseline with `mmdetection` (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-pytorch-baseline)
@@ -224,13 +199,13 @@ docker build .
 - External resources:
   * [Convert Annotations from MS COCO format to PascalVOC format](https://github.com/CasiaFan/Dataset_to_VOC_converter/blob/master/anno_coco2voc.py)
   
+<br><br>
+# ✍️ Maintainers
+* **[Sharada Mohanty](https://twitter.com/memohanty?lang=en)**
+* **[Shivam Khandelwal](https://twitter.com/skbly7?lang=en)**
 
-# ✍️ Author   
-**[Sharada Mohanty](https://twitter.com/memohanty?lang=en)**
-
-## ✨ Contributors
-
-* [Nikhil Rayaprolu](https://github.com/nikhilrayaprolu)
-* [Pulkit Gera](https://github.com/darthgera123)
-* [Shivam Khandelwal](https://twitter.com/skbly7?lang=en)
-* [Jyotish P](https://github.com/jyotishp)
+## Thanks to our awesome contributors! ✨ 
+<br>
+<a href="https://github.com/AIcrowd/food-recognition-challenge-starter-kit/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AIcrowd/food-recognition-challenge-starter-kit" />
+</a>
