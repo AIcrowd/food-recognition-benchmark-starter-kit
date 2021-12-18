@@ -1,26 +1,29 @@
-# <center>Food Recognition Benchmark - Starter Kit</center>
-
 ![Food-Challenge](https://i.imgur.com/haaT8Cu_d.webp?maxwidth=1520&fidelity=grand)
 
-<p align="center"><a href="https://discord.gg/GTckBMx"><img src="https://img.shields.io/discord/657211973435392011?style=for-the-badge" alt="chat on Discord"></a></p>
+# [Food Recognition Benchmark](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022) - Starter Kit
+
+[![Discord](https://img.shields.io/discord/565639094860775436.svg)](https://discord.gg/fNRrSvZkry)
 
 
-<p align="center">This repository is the main Food Recognition Benchmark template and Starter kit!</p>
-<p align="center">Clone the repository to compete now!</p>
-<p align="center">
-<a href="https://www.aicrowd.com/challenges/food-recognition-benchmark-2022">👉 Benchmark Website</a></p>
+This repository is the main Food Recognition Benchmark template and Starter kit. **Clone the repository to compete now!**
 
-----
+This repository contains:
+
+- `mmdetection`, `detectron2` and `matterport-maskrcnn` baselines for tackling this benchmark
+- **Documentation** on how to submit your models to the leaderboard
+- **The procedure** for best practices and information on how we evaluate your agent, etc.
+- **Starter code** for you to get started!
+
+> NOTE: If you are resource-constrained or would not like to setup everything in your system, you can make your submission from inside Google Colab too. Check out the [beta version of the Notebook]().
+<br>
 
 # 🏆 About the Benchmark
 
-<img src="https://i.imgur.com/YvIIgOZ.png">
+<img src="https://i.imgur.com/YvIIgOZ.png" width="600">
 
-This data set has been annotated - or automatic annotations have been verified - with respect to segmentation, classification (mapping the individual food items onto an ontology of Swiss Food items), and weight/volume estimation.
+The goal of this benchmark is to **train models** which can look at images of food items and **detect the individual food items** present in them. This is an ongoing, multi-round benchmark. At each round, the specific tasks and / or datasets will be updated, and each round will have its own prizes. You can participate in multiple rounds, or in single rounds.
 
-The goal of this benchmark is to train models which can look at images of food items and detect the individual food items present in them. 
-
-![](https://i.imgur.com/xzQkwKV.jpg)
+This data set has been **annotated with respect to segmentation, classification** (mapping the individual food items onto an ontology of Swiss Food items), and **weight/volume estimation**.
 
 # Table of contents
 
@@ -56,13 +59,21 @@ The goal of this benchmark is to train models which can look at images of food i
 * [Active Participation 👨‍💻](#-submission)
 </details>
 
+<details align="left">
+<summary>📎 Important Links</summary>
+
+* [Challenge pages](#-important-links)
+* [Colab notebook links](#-important-links)
+* [Other resources](#-important-links)
+</details>
+
 <br>
 
 # 💪 Getting Started
 
 ## Download Dataset
 
-[![](https://i.imgur.com/EnD7Rvl.png)](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/dataset_files)
+<a href="https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/dataset_files"><img src="https://i.imgur.com/EnD7Rvl.png" width="600"></a>
 
 
 ## Using this repository
@@ -83,7 +94,7 @@ pip install -r requirements.txt
 ./run.sh
 ```
 
-This will generate `predictions.json` file in your current directory.
+This will generate `predictions.json` file in your `data/` directory.
 
 # 👥 Participation
 
@@ -102,12 +113,12 @@ Before we do a deep dive into submissions. Check which user persona suits you th
 </thead>
 <tbody>
   <tr>
-    <td>You need to upload json prediction files</td>
-    <td>You need to submit code (and AIcrowd evaluators runs the code to generate predictions)</td>
+    <td>You need to <b>upload prediction</b> json files</td>
+    <td>You need to <b>submit code</b> (and AIcrowd evaluators runs the code to generate predictions)</td>
   </tr>
   <tr>
-    <td>Scores are computed on 40% of the publicly released test set </td>
-    <td>Scores are computed on 100% of the publicly released test set + 40% of the (unreleased) extended test set</td>
+    <td>Scores are computed on <b>40% of the publicly released test set</b> </td>
+    <td>Scores are computed on <b>100% of the publicly released test set + 40% of the (unreleased) extended test set</b></td>
   </tr>
   <tr>
     <td>You are not eligible for the final leaderboard (and prizes)</td>
@@ -115,6 +126,11 @@ Before we do a deep dive into submissions. Check which user persona suits you th
   </tr>
 </tbody>
 </table>
+
+The flow for active participation look as follows:
+
+<img src="https://i.imgur.com/xzQkwKV.jpg" width="700">
+
 
 # 🧩 Repository structure
 
@@ -145,15 +161,14 @@ Before we do a deep dive into submissions. Check which user persona suits you th
 As promised, we will keep it quick for you. Participating is as simple as:
 
 - Generate your predictions using the starter kit
-- Upload them on the [benchmark website](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/submissions/new)
+- Upload `predictions.json` on the [benchmark website](https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/submissions/new)
 - Get scores, iterate, improve! 💪
 
 ## Active Participation 👨‍💻
 
 - Prepare your runtime environment
-- Setup SSH keys for your AIcrowd repository
-- Make submissions by simple git tag pushes
-- Get scores, **more scores** 😉, iterate faster, improve faster! 💪
+- Make submissions by pushing your code repository
+- Get scores, [**more scores**](#-participation) 😉, iterate faster, improve faster! 💪
 
 More details for active participation in present in [SUBMISSION.md](/utils/SUBMISSION.md)
 
@@ -172,6 +187,8 @@ More details for active participation in present in [SUBMISSION.md](/utils/SUBMI
   * [Baseline with `mmdetection` (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-round2)
 - Resources - Round 3
   * [Colab Notebook for data exploration](https://discourse.aicrowd.com/t/detectron2-colab-notebook-from-data-exploration-to-training-the-model/3691)
+  * [Colab Notebook for Detectron2](https://www.aicrowd.com/showcase/baseline-detectron2-starter-kit-for-food-recognition)
+  * [Starter kit for Detectron2](https://gitlab.aicrowd.com/food-recognition-challenge/food-starterkit-detectron2)
 - [Participant contributions](https://discourse.aicrowd.com/tags/c/food-recognition-challenge/112/explainer)
 - External resources:
   * [Convert Annotations from MS COCO format to PascalVOC format](https://github.com/CasiaFan/Dataset_to_VOC_converter/blob/master/anno_coco2voc.py)
