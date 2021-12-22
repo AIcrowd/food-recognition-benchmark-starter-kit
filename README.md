@@ -14,7 +14,7 @@ This repository contains:
 - **The procedure** for best practices and information on how we evaluate your agent, etc.
 - **Starter code** for you to get started!
 
-> NOTE: If you are resource-constrained or would not like to setup everything in your system, you can make your submission from inside Google Colab too. Check out the [beta version of the Notebook]().
+> NOTE: If you are resource-constrained or would not like to setup everything in your system, you can make your submission from inside Google Colab too. Check out the [beta version of the Notebook](https://www.aicrowd.com/showcase/food-recognition-benchmark-data-exploration-baseline).
 <br>
 
 # 🏆 About the Benchmark
