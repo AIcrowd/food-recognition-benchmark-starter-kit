@@ -82,8 +82,8 @@ This repository contains prediction codebase for `mmdetection`, `detectron2` and
 
 ```bash
 # Clone the repository
-git clone https://github.com/AIcrowd/food-recognition-challenge-starter-kit
-cd food-recognition-challenge-starter-kit
+git clone https://github.com/AIcrowd/food-recognition-benchmark-starter-kit
+cd food-recognition-benchmark-starter-kit
 
 # Install dependencies
 pip install -r requirements.txt
@@ -138,7 +138,7 @@ The flow for active participation look as follows:
 
 **File** | **Description**
 --- | ---
-`aicrowd.json` | A configuration file used to identify the challenge and resources needed for evaluation
+`aicrowd.json` | A configuration file used to identify the benchmark and resources needed for evaluation
 `apt.txt` | List of packages that should be installed (via `apt`) for your code to run
 `requirements.txt` | List of python packages that should be installed (via `pip`) for your code to run
 `predict.py` | Entry point to your model
@@ -175,7 +175,7 @@ More details for active participation in present in [SUBMISSION.md](/utils/SUBMI
 # 📎 Important links
 
 
-- 💪 &nbsp;Challenge Page: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022
+- 💪 &nbsp;Benchmark Page: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022
 - 🗣️ &nbsp;Discussion Forum: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/discussion
 - 🏆 &nbsp;Leaderboard: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/leaderboards
 - Resources - Round 1
