@@ -178,6 +178,8 @@ More details for active participation in present in [SUBMISSION.md](/utils/SUBMI
 - 💪 &nbsp;Benchmark Page: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022
 - 🗣️ &nbsp;Discussion Forum: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/discussion
 - 🏆 &nbsp;Leaderboard: https://www.aicrowd.com/challenges/food-recognition-benchmark-2022/leaderboards
+- 👥 &nbsp;Find Teammates: https://discourse.aicrowd.com/t/looking-for-teammates-reply-here/6702
+- 💬 Chat with other participants: https://discord.gg/jVFTB8A
 - Resources - Round 1
   * [Colab Notebook for Data Analysis and Tutorial](https://colab.research.google.com/drive/1A5p9GX5X3n6OMtLjfhnH6Oeq13tWNtFO#scrollTo=ok54AWT_VoWV)
   * [Baseline with `mmdetection` (pytorch)](https://gitlab.aicrowd.com/nikhil_rayaprolu/food-pytorch-baseline)
