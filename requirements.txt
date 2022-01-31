@@ -2,6 +2,16 @@ boto3
 cython
 numpy
 Pillow
-pycocotools==2.0.3
+pycocotools
 pandas
 aicrowd-repo2docker
+aicrowd-api
+opencv-python
+pyyaml==5.1
+
+-f https://download.pytorch.org/whl/cu101/torch_stable.html
+torch==1.8.0+cu101
+torchvision==0.9.0+cu101
+
+-f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.8/index.html
+detectron2==0.6
