@@ -4,5 +4,5 @@
   "authors" : ["aicrowd-bot"],
   "description" : "Food Recognition Benchmark Submission",
   "license" : "MIT",
-  "gpu": true
+  "gpu": false
 }
