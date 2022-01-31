@@ -125,7 +125,7 @@ class Detectron2Predictor(FoodChallengePredictor):
 
     def get_class_to_category(self):
         class_to_category = {}
-        with open("class_to_category.json") as fp:
+        with open("utils/class_to_category.json") as fp:
             class_to_category = json.load(fp)
         return class_to_category
 
