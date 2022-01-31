@@ -1,18 +1,8 @@
 
 {
   "challenge_id" : "food-recognition-benchmark-2022",
-  "authors" : ["aicrowd_bot"],
-  "description" : "Food Recognition Benchmark 2022 Submission",
+  "authors" : ["aicrowd-bot"],
+  "description" : "Food Recognition Benchmark Submission",
   "license" : "MIT",
-  "gpu": true,
-  "debug": false,
-  "model_path": "models/model_final.pth",
-  "model_type": "model_zoo",
-  "model_config_file": "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml",
-  "detectron_model_config": {
-      "ROI_HEADS": {
-        "SCORE_THRESH_TEST": 0.15,
-        "NUM_CLASSES": 498
-      }
-    }   
+  "gpu": true
 }
