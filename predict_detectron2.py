@@ -16,7 +16,7 @@
 #    ## To download model trained with "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml" architecture and score of 0.03 on leaderboard
 #    #> gdown --id 1ylaOzaI6qBfZbICA844uD74dKxLwcd0K --output model_final_mrcnn_x101.pth
 #    ## Next line will download "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml" achitecture and score of 0.08
-#    #> gdown --id 1p5babyX6H80Rt8P8O2ts4g7SJihN2KtV --output model_final_mrcnn_x101.pth
+#    #> gdown --id 1p5babyX6H80Rt8P8O2ts4g7SJihN2KtV --output model_final_mrcnn_resnet50.pth
 # 3. Submit your code using git-lfs
 #    #> git lfs install
 #    #> git lfs track "*.pth"
