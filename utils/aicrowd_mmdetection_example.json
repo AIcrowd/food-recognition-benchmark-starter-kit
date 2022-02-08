@@ -1,0 +1,12 @@
+
+{
+  "challenge_id" : "food-recognition-benchmark-2022",
+  "authors" : ["jerome_patel"],
+  "description" : "Food Recognition Benchmark 2022 Submission mmdetection",
+  "license" : "MIT",
+  "gpu": true,
+  "debug": true,
+  "model_path": "models/latest.pth",
+  "model_type": "mmdetection",
+  "model_config_file": "models/htc_without_semantic_r50_fpn_1x_coco.py"
+}

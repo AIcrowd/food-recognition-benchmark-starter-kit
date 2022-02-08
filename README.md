@@ -9,7 +9,7 @@ This repository is the main Food Recognition Benchmark template and Starter kit.
 
 This repository contains:
 
-- `mmdetection`, `detectron2` and `matterport-maskrcnn` baselines for tackling this benchmark
+- `mmdetection` and `detectron2`  baselines for tackling this benchmark
 - **Documentation** on how to submit your models to the leaderboard
 - **The procedure** for best practices and information on how we evaluate your agent, etc.
 - **Starter code** for you to get started!
@@ -95,6 +95,19 @@ pip install -r requirements.txt
 ```
 
 This will generate `predictions.json` file in your `data/` directory.
+
+## Using colab starter kit
+
+Please refer [this notebook](https://www.aicrowd.com/showcase/detectron2-training-and-submissions-quick-active) for Detectron2 quick and active submission.
+
+Please refer [this notebook](https://colab.research.google.com/drive/10JC_W3fW8W3kI50fZMrxjRWJcqKfY4B7?usp=sharing) for MMDetection quick and active submission.
+
+## Running the code locally
+
+Refer [predict_detectron2.py](https://github.com/AIcrowd/food-recognition-benchmark-starter-kit/blob/master/predict_detectron2.py#L11) for Detectron2 submission
+
+Refer [predict_mmdetection.py](https://github.com/AIcrowd/food-recognition-benchmark-starter-kit/blob/master/predict_mmdetection.py#L11) for MMdetection submission
+
 
 # 👥 Participation
 

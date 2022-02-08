@@ -1,20 +1,23 @@
 #!/usr/bin/env python
 #
+# Here's the Notebook link corresponding to the detectron2 submission:
+# https://www.aicrowd.com/showcase/detectron2-training-and-submissions-quick-active
+#
 # This file uses Detectron2 for instance segmentation.
 # It is one of the official baselines for the Food Recognition benchmark 2022 challenge.
 #
 # NOTE: Detectron2 needs the model and **its** aicrowd.json file to be submitted along with your code.
 #
 # Making submission using Detectron2:
-# 1. Copy the aicrowd_detectron2.json from utils to home directory:
+# 1. Copy the aicrowd_detectron2_example.json from utils to home directory:
 #    #> cp utils/aicrowd_detectron2_example.json aicrowd.json
 # 2. Change the model in `predict.py` to Detectron2Predictor.
 # 3. Download the pre-trained model from google drive into the folder `./models` using:
 #    #> mkdir models
 #    #> cd models
 #    #> pip install gdown
-#    ## To download model trained with "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml" architecture and score of 0.03 on leaderboard
-#    #> gdown --id 1ylaOzaI6qBfZbICA844uD74dKxLwcd0K --output model_final_mrcnn_x101.pth
+#    ## To download model trained with "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml" architecture and score of 0.06 on leaderboard
+#    #> gdown --id 1QfjKQc-WqnNGpWXBaPf4sQayJjcgGuq9 --output model_final_mrcnn_x101.pth
 #    ## Next line will download "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml" achitecture and score of 0.08
 #    #> gdown --id 1p5babyX6H80Rt8P8O2ts4g7SJihN2KtV --output model_final_mrcnn_resnet50.pth
 # 3. Submit your code using git-lfs

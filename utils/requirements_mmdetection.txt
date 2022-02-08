@@ -1,7 +1,20 @@
+
+boto3
 cython
 numpy
+Pillow==7.0.0
+pycocotools
+pandas
+aicrowd-repo2docker
 aicrowd-api
-timeout_decorator
-git+https://github.com/AIcrowd/coco.git#subdirectory=PythonAPI
-git+https://github.com/open-mmlab/mmdetection.git@v2.3.0
+opencv-python
+pyyaml==5.1
 
+-f https://download.pytorch.org/whl/cu101/torch_stable.html
+torch==1.8.0+cu101
+torchvision==0.9.0+cu101
+
+-f https://download.openmmlab.com/mmcv/dist/cu101/torch1.8.0/index.html
+mmcv-full==1.4.4
+
+mmdet

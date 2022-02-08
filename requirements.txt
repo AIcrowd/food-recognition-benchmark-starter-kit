@@ -15,3 +15,8 @@ torchvision==0.9.0+cu101
 
 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.8/index.html
 detectron2==0.6
+
+-f https://download.openmmlab.com/mmcv/dist/cu101/torch1.8.0/index.html
+mmcv-full==1.4.4
+
+mmdet
