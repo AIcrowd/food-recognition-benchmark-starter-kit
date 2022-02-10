@@ -2,6 +2,7 @@
 from predict_detectron2 import Detectron2Predictor
 from predict_mmdetection import MMDetectionPredictor
 
+
 # Predictor which does nothing
 # random_predictor = RandomPredictor()
 
@@ -22,5 +23,6 @@ detectron2_predictor = Detectron2Predictor()
 PARTICIPANT_TODO: The implementation you want to submit as your submission
 """
 submission = mmdetection_predictor
+
 submission.run()
 print("Successfully generated predictions...")
