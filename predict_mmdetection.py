@@ -9,7 +9,12 @@
 # 1. Copy the aicrowd_mmdetection_example.json from utils to home directory:
 #    #> cp utils/aicrowd_mmdetection_example.json aicrowd.json
 # 2. Change the model in `predict.py` to MMDetectionPredictor.
-# 3. Add your pre-trained model into the folder `./models`.
+# 3. Download the pre-trained model from google drive into the folder `./models` using:
+#    #> mkdir models
+#    #> cd models
+#    #> pip install gdown
+#    ## To download model trained with "htc_without_semantic_r50_fpn_1x" architecture and score of 0.11 on leaderboard
+#    #> gdown --id 1dgsE-efNK8JlpwH911bSXCi9r6lXZAJq --output model_final_mrcnn_x101.pth
 # 4. Submit your code using git-lfs
 #    #> git lfs install
 #    #> git lfs track "*.pth"
