@@ -158,7 +158,8 @@ class MMDetectionPredictor(FoodChallengePredictor):
 
                 # This is only provided for participants to submit their v2.0 dataset models easily
                 # with v2.1 dataset.
-                # data["category_id"] = self.v2_0_to_v2_1_mapping(data["category_id"])
+                # Please disable if you are submitting model trained on v2.1 dataset
+                data["category_id"] = self.v2_0_to_v2_1_mapping(data["category_id"])
 
                 if isinstance(segms[i]["counts"], bytes):
                     segms[i]["counts"] = segms[i]["counts"].decode()
@@ -195,7 +196,9 @@ class MMDetectionPredictor(FoodChallengePredictor):
     def v2_0_to_v2_1_mapping(self, id):
         if not hasattr(self, 'mapping'):
             self.old_to_new_mapping = json.loads(open("utils/v2.1_breaking_class_mapping.json").read())
-        return self.old_to_new_mapping[id]
+        if id in self.old_to_new_mapping:
+            id = self.old_to_new_mapping[id]
+        return id
 
 if __name__ == "__main__":
     submission = MMDetectionPredictor()
