@@ -85,11 +85,22 @@ class MMDetectionPredictor(FoodChallengePredictor):
         self.cfg.data.samples_per_gpu = 1
         self.cfg.data.workers_per_gpu = 2
         self.cfg.model.pretrained = None
+        # For RFP based models we have another pretrained to set to None
+        if self.cfg.model.get('neck'):
+            if isinstance(self.cfg.model.neck, list):
+                for neck_cfg in self.cfg.model.neck:
+                    if neck_cfg.get('rfp_backbone'):
+                        if neck_cfg.rfp_backbone.get('pretrained'):
+                            neck_cfg.rfp_backbone.pretrained = None
+            elif self.cfg.model.neck.get('rfp_backbone'):
+                if self.cfg.model.neck.rfp_backbone.get('pretrained'):
+                    self.cfg.model.neck.rfp_backbone.pretrained = None
+
         self.cfg.data.test.test_mode = True
         self.cfg.data.test.ann_file = self.test_predictions_file.name
         self.cfg.data.test.img_prefix = self.test_data_path
 
-        self.model = init_detector(self.cfg_name, self.checkpoint_name, device="cuda:0")
+        self.model = init_detector(self.cfg, self.checkpoint_name, device="cuda:0")
 
         fp16_cfg = self.cfg.get("fp16", None)
         if fp16_cfg is not None:
