@@ -156,15 +156,16 @@ class MMDetectionPredictor(FoodChallengePredictor):
                 data["score"] = float(mask_score[i])
                 data["category_id"] = self.cat_ids[label]
 
+                if isinstance(segms[i]["counts"], bytes):
+                    segms[i]["counts"] = segms[i]["counts"].decode()
+                data["segmentation"] = segms[i]
+
                 # This is only provided for participants to submit their v2.0 dataset models easily
                 # with v2.1 dataset.
                 # Please disable if you are submitting model trained on v2.1 dataset
                 data["category_id"] = self.v2_0_to_v2_1_mapping(data["category_id"])
-
-                if isinstance(segms[i]["counts"], bytes):
-                    segms[i]["counts"] = segms[i]["counts"].decode()
-                data["segmentation"] = segms[i]
-                segm_json_results.append(data)
+                if data["category_id"] is not None:
+                    segm_json_results.append(data)
         return segm_json_results
 
     def create_test_predictions(self, images_path):
@@ -196,8 +197,10 @@ class MMDetectionPredictor(FoodChallengePredictor):
     def v2_0_to_v2_1_mapping(self, id):
         if not hasattr(self, 'mapping'):
             self.old_to_new_mapping = json.loads(open("utils/v2.1_breaking_class_mapping.json").read())
-        if id in self.old_to_new_mapping:
-            id = self.old_to_new_mapping[id]
+        if str(id) in self.old_to_new_mapping:
+            id = self.old_to_new_mapping[str(id)]
+        if id not in self.valid_categories():
+            id = None
         return id
 
 if __name__ == "__main__":
