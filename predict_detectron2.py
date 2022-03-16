@@ -9,7 +9,6 @@
 # NOTE: Detectron2 needs the model and **its** aicrowd.json file to be submitted along with your code.
 #
 # Making submission using Detectron2:
-
 # 1. Copy the aicrowd_detectron2_example.json from utils to home directory:
 #    #> cp utils/aicrowd_detectron2_example.json aicrowd.json
 # 2. Change the model in `predict.py` to Detectron2Predictor.
@@ -17,10 +16,9 @@
 #    #> mkdir models
 #    #> cd models
 #    #> pip install gdown
-#    ## To download model trained with "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml" architecture and score of 0.06 on leaderboard
-#    #> gdown --id 1QfjKQc-WqnNGpWXBaPf4sQayJjcgGuq9 --output model_final_mrcnn_x101.pth
-#    ## Next line will download "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml" achitecture and score of 0.08
-#    #> gdown --id 1p5babyX6H80Rt8P8O2ts4g7SJihN2KtV --output model_final_mrcnn_resnet50.pth
+#    ## Next line will download "COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml" achitecture and score of 0.082
+#    #> gdown --id 1-E8ts5-5Ce-kafOx5yGqljy91-ZefuEo --output model_final_mrcnn_resnet101.pth
+#
 # 3. Submit your code using git-lfs
 #    #> git lfs install
 #    #> git lfs track "*.pth"
@@ -77,7 +75,7 @@ class Detectron2Predictor(FoodChallengePredictor):
 
         #set the threshold & num classes
         self.cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = self.config["detectron_model_config"]["ROI_HEADS"]["SCORE_THRESH_TEST"]   # set the testing threshold for this model
-        self.cfg.MODEL.ROI_HEADS.NUM_CLASSES = 498
+        self.cfg.MODEL.ROI_HEADS.NUM_CLASSES = self.config["detectron_model_config"]["ROI_HEADS"]["NUM_CLASSES"]
 
         self.cfg.MODEL.DEVICE = "cuda"
         self.predictor = DefaultPredictor(self.cfg)
@@ -129,7 +127,7 @@ class Detectron2Predictor(FoodChallengePredictor):
 
     def get_class_to_category(self):
         class_to_category = {}
-        with open("utils/class_to_category.json") as fp:
+        with open("utils/class_to_category_round2.json") as fp:
             class_to_category = json.load(fp)
         return class_to_category
 

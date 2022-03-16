@@ -5,7 +5,7 @@
 #
 # NOTE: MMdetection needs the model and **its** aicrowd.json file to be submitted along with your code.
 #
-# Making submission using Detectron2:
+# Making submission using mmdetection:
 # 1. Copy the aicrowd_mmdetection_example.json from utils to home directory:
 #    #> cp utils/aicrowd_mmdetection_example.json aicrowd.json
 # 2. Change the model in `predict.py` to MMDetectionPredictor.
@@ -13,8 +13,8 @@
 #    #> mkdir models
 #    #> cd models
 #    #> pip install gdown
-#    ## To download model trained with "htc_without_semantic_r50_fpn_1x" architecture and score of 0.11 on leaderboard
-#    #> gdown --id 1dgsE-efNK8JlpwH911bSXCi9r6lXZAJq --output model_final_mrcnn_x101.pth
+#    ## To download model trained with "htc_without_semantic_r50_fpn_1x" architecture and score of 0.131 on leaderboard
+#    #> gdown --id 1-7ZNPG0JDdfCWAZ0ue07r0Nw8rQ1oKLW --output latest.pth
 # 4. Submit your code using git-lfs
 #    #> git lfs install
 #    #> git lfs track "*.pth"
@@ -61,14 +61,12 @@ Expected ENVIRONMENT Variables
 * AICROWD_PREDICTIONS_OUTPUT_PATH : path where you are supposed to write the output predictions.json
 """
 
-
 class MMDetectionPredictor(FoodChallengePredictor):
 
     """
     PARTICIPANT_TODO:
     You can do any preprocessing required for your codebase here like loading up models into memory, etc.
     """
-
     def prediction_setup(self):
         # self.PADDING = 50
         # self.SEGMENTATION_LENGTH = 10
@@ -120,7 +118,6 @@ class MMDetectionPredictor(FoodChallengePredictor):
     During the evaluation all image file path will be provided one by one.
     NOTE: In case you want to load your model, please do so in `predict_setup` function.
     """
-
     def prediction(self, image_path):
         print("Generating for", image_path)
         # read the image
@@ -163,7 +160,7 @@ class MMDetectionPredictor(FoodChallengePredictor):
                 # This is only provided for participants to submit their v2.0 dataset models easily
                 # with v2.1 dataset.
                 # Please disable if you are submitting model trained on v2.1 dataset
-                data["category_id"] = self.v2_0_to_v2_1_mapping(data["category_id"])
+                # data["category_id"] = self.v2_0_to_v2_1_mapping(data["category_id"])
                 if data["category_id"] is not None:
                     segm_json_results.append(data)
         return segm_json_results
@@ -181,7 +178,7 @@ class MMDetectionPredictor(FoodChallengePredictor):
             image_dict["width"] = width
             image_dict["height"] = height
             annotations["images"].append(image_dict)
-        annotations["categories"] = json.loads(open("utils/classes.json").read())
+        annotations["categories"] = json.loads(open("utils/classes_round2.json").read())
         json.dump(annotations, open(test_predictions_file.name, "w"))
 
         return test_predictions_file
