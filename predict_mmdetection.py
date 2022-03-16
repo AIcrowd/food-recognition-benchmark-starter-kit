@@ -13,9 +13,7 @@
 #    #> mkdir models
 #    #> cd models
 #    #> pip install gdown
-#    ## To download model trained with "htc_without_semantic_r50_fpn_1x" architecture and score of 0.11 on leaderboard round 1 model
-#    #> gdown --id 1dgsE-efNK8JlpwH911bSXCi9r6lXZAJq --output latest.pth
-#    ## To download model trained with "htc_without_semantic_r50_fpn_1x" architecture and score of 0.131 on leaderboard round 2 model
+#    ## To download model trained with "htc_without_semantic_r50_fpn_1x" architecture and score of 0.131 on leaderboard
 #    #> gdown --id 1-7ZNPG0JDdfCWAZ0ue07r0Nw8rQ1oKLW --output latest.pth
 # 4. Submit your code using git-lfs
 #    #> git lfs install
@@ -163,8 +161,8 @@ class MMDetectionPredictor(FoodChallengePredictor):
                 # with v2.1 dataset.
                 # Please disable if you are submitting model trained on v2.1 dataset
                 # data["category_id"] = self.v2_0_to_v2_1_mapping(data["category_id"])
-                # if data["category_id"] is not None:
-                #     segm_json_results.append(data)
+                if data["category_id"] is not None:
+                    segm_json_results.append(data)
         return segm_json_results
 
     def create_test_predictions(self, images_path):

@@ -16,11 +16,7 @@
 #    #> mkdir models
 #    #> cd models
 #    #> pip install gdown
-#    ## To download model trained with "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml" architecture and score of 0.06 on leaderboard round 1
-#    #> gdown --id 1QfjKQc-WqnNGpWXBaPf4sQayJjcgGuq9 --output model_final_mrcnn_x101.pth
-#    ## Next line will download "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml" achitecture and score of 0.08 round 1
-#    #> gdown --id 1p5babyX6H80Rt8P8O2ts4g7SJihN2KtV --output model_final_mrcnn_resnet50.pth
-#    ## Next line will download "COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml" achitecture and score of 0.082 round 2
+#    ## Next line will download "COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml" achitecture and score of 0.082
 #    #> gdown --id 1-E8ts5-5Ce-kafOx5yGqljy91-ZefuEo --output model_final_mrcnn_resnet101.pth
 #
 # 3. Submit your code using git-lfs
