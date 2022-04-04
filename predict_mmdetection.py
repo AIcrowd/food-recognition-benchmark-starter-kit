@@ -6,8 +6,9 @@
 # NOTE: MMdetection needs the model and **its** aicrowd.json file to be submitted along with your code.
 #
 # Making submission using mmdetection:
-# 1. Copy the aicrowd_mmdetection_example.json from utils to home directory:
+# 1. Copy the aicrowd json & requirementst from utils to home directory:
 #    #> cp utils/aicrowd_mmdetection_example.json aicrowd.json
+#    #> cp utils/requirements_mmdetection.txt requirements.txt
 # 2. Change the model in `predict.py` to MMDetectionPredictor.
 # 3. Download the pre-trained model from google drive into the folder `./models` using:
 #    #> mkdir models

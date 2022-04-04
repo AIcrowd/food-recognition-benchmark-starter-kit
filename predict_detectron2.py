@@ -9,8 +9,9 @@
 # NOTE: Detectron2 needs the model and **its** aicrowd.json file to be submitted along with your code.
 #
 # Making submission using Detectron2:
-# 1. Copy the aicrowd_detectron2_example.json from utils to home directory:
+# 1. Copy the aicrowd json & requirements.txt from utils to home directory:
 #    #> cp utils/aicrowd_detectron2_example.json aicrowd.json
+#    #> cp utils/requirements_detectron2.txt requirements.txt
 # 2. Change the model in `predict.py` to Detectron2Predictor.
 # 3. Download the pre-trained model from google drive into the folder `./models` using:
 #    #> mkdir models
