@@ -8,7 +8,7 @@ pandas
 aicrowd-repo2docker
 aicrowd-api
 opencv-python
-pyyaml==5.1
+pyyaml==5.4
 
 -f https://download.pytorch.org/whl/cu101/torch_stable.html
 torch==1.8.0+cu101
