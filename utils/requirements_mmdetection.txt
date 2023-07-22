@@ -11,7 +11,7 @@ opencv-python
 pyyaml==5.1
 
 -f https://download.pytorch.org/whl/cu101/torch_stable.html
-torch==1.8.0+cu101
+torch==1.13.1
 torchvision==0.9.0+cu101
 
 -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.8.0/index.html
